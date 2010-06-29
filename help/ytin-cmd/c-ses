@@ -1,0 +1,101 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+<title>yTin help</title>
+<meta name="charset" content="GB2312" />
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+</head>
+<body bgcolor="#EBE7D6">
+<h1><table><tr><td><font face="arial" size="1"><a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?e">English</a> <br /> <a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c">Chinese</a></font></td> <td> &nbsp <font face="Comic Sans MS" size="5"><a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin">yTin Online Help</a></font> &nbsp </td> <td><!-- BEGIN FASTCOUNTER CODE -->
+<a target="_top" href="http://member.bcentral.com/cgi-bin/fc/fastcounter-login?1917314"><img height="16" border="0" src="http://fastcounter.bcentral.com/fastcounter?1917314+3834635" width="90" /></a><!-- END FASTCOUNTER CODE --></td></tr></table></h1><SPAN>
+<TABLE WIDTH="100%" CELLPADDING="0" CELLSPACING="0" BORDER="0" BGCOLOR="#0099FF">
+
+<TD BGCOLOR="#0099FF" HEIGHT="20" VALIGN="MIDDLE" NOWRAP="" COLSPAN="4">
+<FONT COLOR="#FFFFFF" FACE="Verdana, Arial" SIZE="1"><B>
+
+<FONT COLOR="#FFFFFF">&nbsp</FONT>
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/index_c.html" TARGET="_top">
+<FONT COLOR="#FFFFFF">中文主页</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/index_e.html" TARGET="_top">
+<FONT COLOR="#FFFFFF">Home (english)</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/cgi-bin/dir.pl/ytin?c" TARGET="_top">
+<FONT COLOR="#FFFFFF">快快下载</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/cgi-bin/dir.pl/help" TARGET="_top">
+<FONT COLOR="#FFFFFF">实战教程</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/cgi-bin/help.pl/ytin?c" TARGET="_top">
+<FONT COLOR="#FFFFFF">命令帮助</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/util_c.html" TARGET="_top">
+<FONT COLOR="#FFFFFF">实用工具</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/faq_c.html" TARGET="_top">
+<FONT COLOR="#FFFFFF">常问问题</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="http://server6.ezboard.com/fytinytin.html" TARGET="_top">
+<FONT COLOR="#FFFFFF">讨论留言</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/links_c.html" TARGET="_top">
+<FONT COLOR="#FFFFFF">友好泥潭</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/myprogs_c.html" TARGET="_top">
+<FONT COLOR="#FFFFFF">我的程序</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/mirror_c.html" TARGET="_top">
+<FONT COLOR="#FFFFFF">全球镜像</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+</B></FONT></TD>
+</TR>
+</TABLE>
+</SPAN>
+
+<font face="Comic Sans MS" size="2">
+<table border="0" cellspacing="10">
+<font size="5">ses</font><br>
+<br>
+格式：<a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-session">#session</a> {session名} {ip port}<br>
+<br>
+说明：<a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-session">#session</a> 可简写成 <a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-ses">#ses</a>。<br>
+&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp session名可用变量代替，以区分同一窗口下的不同session。<br>
+&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp 此命令最好与 alias 一起用，以方便连接到mud。<br>
+用处：连接到mud。session 名最好不要用数字，以免切换 session 的时候<br>
+&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp 跟 tintin 的重复命令冲突。<br>
+举例：<br>
+&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp  <a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-session">#session</a> el1 {202.105.177.101 6666}<br>
+&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp  当打开 ytin 窗口后键入此行命令，将直接连接到东方神话mud。这时，<br>
+&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp  这个 session 的名字就叫 el1。<br>
+&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp  <a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-alias">#alias</a> el {<a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-session">#session</a> %1 202.105.177.101 6666}<br>
+&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp  <a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-alias">#alias</a> mud2 {<a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-session">#session</a> %1 123.456.789 0000}<br>
+&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp 当键入 el nut 时将连接到东方神话mud，这个 session 的名字就是 nut<br>
+&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp 了。用角色名字做 session 名的好处是容易取分不同 session。<br>
+&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp 同时，在 nut 这个 session 中，可以再开别的 session，比如：可以键<br>
+&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp 入 mud2 xine，或者 el miaom，一个名为 xine 或 miaom 的session<br>
+&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp 将产生。<br>
+&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp 用 <a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-nut">#nut</a>, <a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-xine">#xine</a>, <a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-miaom">#miaom</a> 可以在不同 session 中来回切换。<br>
+其它：<br>
+核桃的得意之处。当 port 是0时，一个虚拟的并不实际连接到任何地方的session<br>
+将被激发，IP 是此 session 建立后显示的信息。这对自动连接很重要，是tintin++<br>
+长期以来所缺乏的功能。<br>
+<br>
+</table>
+</font>
+<hr>
+
+</body>
+</html>

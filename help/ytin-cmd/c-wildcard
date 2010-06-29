@@ -1,0 +1,99 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+<title>yTin help</title>
+<meta name="charset" content="GB2312" />
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+</head>
+<body bgcolor="#EBE7D6">
+<h1><table><tr><td><font face="arial" size="1"><a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?e">English</a> <br /> <a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c">Chinese</a></font></td> <td> &nbsp <font face="Comic Sans MS" size="5"><a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin">yTin Online Help</a></font> &nbsp </td> <td><!-- BEGIN FASTCOUNTER CODE -->
+<a target="_top" href="http://member.bcentral.com/cgi-bin/fc/fastcounter-login?1917314"><img height="16" border="0" src="http://fastcounter.bcentral.com/fastcounter?1917314+3834635" width="90" /></a><!-- END FASTCOUNTER CODE --></td></tr></table></h1><SPAN>
+<TABLE WIDTH="100%" CELLPADDING="0" CELLSPACING="0" BORDER="0" BGCOLOR="#0099FF">
+
+<TD BGCOLOR="#0099FF" HEIGHT="20" VALIGN="MIDDLE" NOWRAP="" COLSPAN="4">
+<FONT COLOR="#FFFFFF" FACE="Verdana, Arial" SIZE="1"><B>
+
+<FONT COLOR="#FFFFFF">&nbsp</FONT>
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/index_c.html" TARGET="_top">
+<FONT COLOR="#FFFFFF">中文主页</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/index_e.html" TARGET="_top">
+<FONT COLOR="#FFFFFF">Home (english)</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/cgi-bin/dir.pl/ytin?c" TARGET="_top">
+<FONT COLOR="#FFFFFF">快快下载</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/cgi-bin/dir.pl/help" TARGET="_top">
+<FONT COLOR="#FFFFFF">实战教程</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/cgi-bin/help.pl/ytin?c" TARGET="_top">
+<FONT COLOR="#FFFFFF">命令帮助</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/util_c.html" TARGET="_top">
+<FONT COLOR="#FFFFFF">实用工具</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/faq_c.html" TARGET="_top">
+<FONT COLOR="#FFFFFF">常问问题</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="http://server6.ezboard.com/fytinytin.html" TARGET="_top">
+<FONT COLOR="#FFFFFF">讨论留言</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/links_c.html" TARGET="_top">
+<FONT COLOR="#FFFFFF">友好泥潭</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/myprogs_c.html" TARGET="_top">
+<FONT COLOR="#FFFFFF">我的程序</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/mirror_c.html" TARGET="_top">
+<FONT COLOR="#FFFFFF">全球镜像</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+</B></FONT></TD>
+</TR>
+</TABLE>
+</SPAN>
+
+<font face="Comic Sans MS" size="2">
+<table border="0" cellspacing="10">
+<font size="5">wildcard</font><br>
+<br>
+format:&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp <a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-command">#command</a> {regexp}<br>
+<br>
+You may use wildcards with certain commands such as <a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-alias">#alias</a>, <a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-action">#action</a>,<br>
+<a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-substitute">#substitute</a>, <a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-unalias">#unalias</a>, etc.&nbsp&nbsp In commands like <a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-alias">#alias</a>, wildcards are<br>
+only valid when you use exactly one argument.&nbsp&nbsp Wildcards are always<br>
+valid for commands like <a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-unalias">#unalias</a>.&nbsp&nbsp The only wildcard currently<br>
+supported is *, which matches any string 0 or more characters long.<br>
+The wildcard meaning of * may be escaped using the backslash, \.<br>
+<br>
+Examples:<br>
+<br>
+<a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-action">#action</a> {*miss*}<br>
+&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp shows all actions which contain the word miss in them<br>
+<a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-unaction">#unaction</a> {*miss*}<br>
+&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp removes all actions which contain the word miss in them<br>
+<a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-unaction">#unaction</a> {\*\*\* PRESS RETURN:}<br>
+&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp removes the action which triggers on the line *** PRESS RETURN:<br>
+<br>
+Many thanks to Spencer Sun for letting me steal some code for this...<br>
+If anyone is interested in having full ls-style regexps, email me<br>
+and maybe it'll be included in 2.0.<br>
+<br>
+</table>
+</font>
+<hr>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+<title>yTin help</title>
+<meta name="charset" content="GB2312" />
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+</head>
+<body bgcolor="#EBE7D6">
+<h1><table><tr><td><font face="arial" size="1"><a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?e">English</a> <br /> <a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c">Chinese</a></font></td> <td> &nbsp <font face="Comic Sans MS" size="5"><a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin">yTin Online Help</a></font> &nbsp </td> <td><!-- BEGIN FASTCOUNTER CODE -->
+<a target="_top" href="http://member.bcentral.com/cgi-bin/fc/fastcounter-login?1917314"><img height="16" border="0" src="http://fastcounter.bcentral.com/fastcounter?1917314+3834635" width="90" /></a><!-- END FASTCOUNTER CODE --></td></tr></table></h1><SPAN>
+<TABLE WIDTH="100%" CELLPADDING="0" CELLSPACING="0" BORDER="0" BGCOLOR="#0099FF">
+
+<TD BGCOLOR="#0099FF" HEIGHT="20" VALIGN="MIDDLE" NOWRAP="" COLSPAN="4">
+<FONT COLOR="#FFFFFF" FACE="Verdana, Arial" SIZE="1"><B>
+
+<FONT COLOR="#FFFFFF">&nbsp</FONT>
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/index_c.html" TARGET="_top">
+<FONT COLOR="#FFFFFF">中文主页</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/index_e.html" TARGET="_top">
+<FONT COLOR="#FFFFFF">Home (english)</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/cgi-bin/dir.pl/ytin?c" TARGET="_top">
+<FONT COLOR="#FFFFFF">快快下载</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/cgi-bin/dir.pl/help" TARGET="_top">
+<FONT COLOR="#FFFFFF">实战教程</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/cgi-bin/help.pl/ytin?c" TARGET="_top">
+<FONT COLOR="#FFFFFF">命令帮助</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/util_c.html" TARGET="_top">
+<FONT COLOR="#FFFFFF">实用工具</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/faq_c.html" TARGET="_top">
+<FONT COLOR="#FFFFFF">常问问题</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="http://server6.ezboard.com/fytinytin.html" TARGET="_top">
+<FONT COLOR="#FFFFFF">讨论留言</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/links_c.html" TARGET="_top">
+<FONT COLOR="#FFFFFF">友好泥潭</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/myprogs_c.html" TARGET="_top">
+<FONT COLOR="#FFFFFF">我的程序</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/mirror_c.html" TARGET="_top">
+<FONT COLOR="#FFFFFF">全球镜像</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+</B></FONT></TD>
+</TR>
+</TABLE>
+</SPAN>
+
+<font face="Comic Sans MS" size="2">
+<table border="0" cellspacing="10">
+<font size="5">variable</font><br>
+<br>
+format:&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp <a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-variable">#variable</a> {<variable_name>} {<text to fill variable>}<br>
+<br>
+Since these are completely new to tintin, and act differently<br>
+than anything else, I feel should spend some time on them.<br>
+These variables differ from the %0-9 in the fact that you could<br>
+specify a full word as a variable name, and they stay in memory for<br>
+the full session, unless they are changed, and they can be saved in<br>
+the coms file, and can be set to different values if you have 2 or<br>
+more sessions running at the same time.&nbsp&nbsp One of the best uses for<br>
+variables I think is for spellcasters.<br>
+<br>
+Currently, you would set up a bunch of aliases like the following.<br>
+<br>
+<a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-alias">#alias</a> {flame} {cast 'flame strike' %0}<br>
+<a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-alias">#alias</a> {flash} {cast 'call lightning' %0}<br>
+<a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-alias">#alias</a> {harm} {cast 'harm' %0}<br>
+<br>
+With the new variables you can do the following:<br>
+<br>
+<a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-alias">#alias</a> {targ} {<a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-var">#var</a> target %0}<br>
+<a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-alias">#alias</a> {flamet} {flame $target}<br>
+<a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-alias">#alias</a> {flasht} {flash $target}<br>
+<a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-alias">#alias</a> {harmt} {harm $target}<br>
+<br>
+these aliases will be&nbsp&nbsp defined just as they are written, the variables<br>
+are not substituted&nbsp&nbsp for until the&nbsp&nbsp alias is found&nbsp&nbsp in your input&nbsp&nbsp and<br>
+executed.<br>
+<br>
+so, if before a battle, you do a:<br>
+targ donjonkeeper<br>
+then $target is set to donjonkeeper, and any alias you set up with<br>
+$target in it will substitute donjonkeeper for every instance of<br>
+$target.&nbsp&nbsp Let's say your leader has the following alias set up.<br>
+<br>
+<a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-alias">#alias</a> {setttarg} {<a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-var">#var</a> {target} {%0};gt target=%0}<br>
+<br>
+if he did a settarg lich, it would set his $target to lich, and<br>
+would send a:<br>
+<br>
+<name> tells your group 'target=lich'<br>
+<br>
+you could then set an action like so.<br>
+<br>
+<a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-action">#action</a> {^%0 tells your group 'target=%1'} {targ %1}<br>
+<br>
+then when your leader executed his alias, it would also set your<br>
+variable to the target.<br>
+<br>
+Another use for variables would be to set a variable $buffer to<br>
+whoever the current buffer is.&nbsp&nbsp This would be useful in fights<br>
+where the mob switches, or where many rescues are needed.&nbsp&nbsp You<br>
+could set up healing aliases with $buffer in them, and set the<br>
+$buffer variable in an action that is triggered by each switch,<br>
+and each rescue, or just rescues, or whatever.&nbsp&nbsp Then in a<br>
+confusing battle, you will have a better shot at healing the<br>
+right person.<br>
+<br>
+</table>
+</font>
+<hr>
+
+</body>
+</html>

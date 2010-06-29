@@ -1,0 +1,113 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+<title>yTin help</title>
+<meta name="charset" content="GB2312" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+</head>
+<body bgcolor="#EBE7D6">
+<h1><table><tr><td><font face="arial" size="1"><a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?e">English</a> <br /> <a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c">Chinese</a></font></td> <td> &nbsp <font face="Comic Sans MS" size="5"><a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin">yTin Online Help</a></font> &nbsp </td> <td><!-- BEGIN FASTCOUNTER CODE -->
+<a target="_top" href="http://member.bcentral.com/cgi-bin/fc/fastcounter-login?1917314"><img height="16" border="0" src="http://fastcounter.bcentral.com/fastcounter?1917314+3834635" width="90" /></a><!-- END FASTCOUNTER CODE --></td></tr></table></h1><SPAN>
+<TABLE WIDTH="100%" CELLPADDING="0" CELLSPACING="0" BORDER="0" BGCOLOR="#0099FF">
+
+<TD BGCOLOR="#0099FF" HEIGHT="20" VALIGN="MIDDLE" NOWRAP="" COLSPAN="4">
+<FONT COLOR="#FFFFFF" FACE="Verdana, Arial" SIZE="1"><B>
+
+<FONT COLOR="#FFFFFF">&nbsp</FONT>
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/index_c.html" TARGET="_top">
+<FONT COLOR="#FFFFFF">ÖÐÎÄÖ÷Ò³</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/index_e.html" TARGET="_top">
+<FONT COLOR="#FFFFFF">Home (english)</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/cgi-bin/dir.pl/ytin?c" TARGET="_top">
+<FONT COLOR="#FFFFFF">¿ì¿ìÏÂÔØ</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/cgi-bin/dir.pl/help" TARGET="_top">
+<FONT COLOR="#FFFFFF">ÊµÕ½½Ì³Ì</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/cgi-bin/help.pl/ytin?c" TARGET="_top">
+<FONT COLOR="#FFFFFF">ÃüÁî°ïÖú</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/util_c.html" TARGET="_top">
+<FONT COLOR="#FFFFFF">ÊµÓÃ¹¤¾ß</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/faq_c.html" TARGET="_top">
+<FONT COLOR="#FFFFFF">³£ÎÊÎÊÌâ</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="http://server6.ezboard.com/fytinytin.html" TARGET="_top">
+<FONT COLOR="#FFFFFF">ÌÖÂÛÁôÑÔ</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/links_c.html" TARGET="_top">
+<FONT COLOR="#FFFFFF">ÓÑºÃÄàÌ¶</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/myprogs_c.html" TARGET="_top">
+<FONT COLOR="#FFFFFF">ÎÒµÄ³ÌÐò</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/mirror_c.html" TARGET="_top">
+<FONT COLOR="#FFFFFF">È«Çò¾µÏñ</FONT></A>
+<FONT COLOR="#FFFFFF"> | </FONT>
+
+</B></FONT></TD>
+</TR>
+</TABLE>
+</SPAN>
+
+<font face="Comic Sans MS" size="2">
+<table border="0" cellspacing="10">
+<font size="5">math</font><br>
+<br>
+format:&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp <a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-math">#math</a> {variable} {expression}<br>
+<br>
+Performs math functions and stored the result in a variable.&nbsp&nbsp The math<br>
+follows a C-like precedence, as follows, with the top of the list having<br>
+the highest priority.<br>
+<br>
+Operators&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp Function<br>
+------------------------------------------------<br>
+!&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp logical not<br>
+*&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp integer multiply<br>
+/&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp integer divide<br>
++&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp integer addition<br>
+-&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp integer subtraction<br>
+>&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp greater than (result is non-zero or zero)<br>
+>=&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp  greater than or equal (result is non-zero or zero)<br>
+<&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp less than (result is non-zero or zero)<br>
+<=&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp  less than or equal (result is non-zero or zero)<br>
+= or ==&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp equals (result is non-zero or zero)<br>
+!=&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp  not equal (result is non-zero or zero)<br>
+& or &&&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp logical and (result is non-zero or zero)<br>
+| or ||&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp logical or (result is non-zero or zero)<br>
+<br>
+True is any non-zero number, and False is zero.&nbsp&nbsp In the expression, you may<br>
+use T and F as true and false.&nbsp&nbsp Parentheses () have highest precedence,<br>
+so inside the parentheses is always evaluated first.<br>
+<br>
+examples:<br>
+<a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-math">#math</a> {heals} {$mana/40}<br>
+Assuming there is a variable $mana, divide its value by 40 and store the<br>
+result in $heals.<br>
+<a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-action">#action</a> {^You receive %0 experience} {updatexp %0}<br>
+<a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-alias">#alias</a> updatexp {<a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-math">#math</a> {xpneed} {$xpneed-%%0}<br>
+Let's say you have a variable which stores xp needed for your next<br>
+level.&nbsp&nbsp The above will modify that variable after every kill, showing<br>
+the amount still needed.<br>
+<br>
+</table>
+</font>
+<hr>
+
+</body>
+</html>
