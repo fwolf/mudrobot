@@ -1,0 +1,143 @@
+上面两篇文章作了个入门介绍，现在讲几个基本的命令，懂得
+这几个命令，基本上可以干大多数不复杂的事了。
+
+-----------------------------------------------------------
+第一个命令是 alias
+下面是一些例子：
+/alias f2 {exert recover}
+/alias cf2 {exercise %0;/alias lastact {exercise %%0}}
+注意 %0, %%0 的用法，每多一层 { } 就要多一个 %0。有些混淆了？
+把上面两个 alias 重新写完整一些你就知道了：
+/alias {f2 %0} {exert recover %0}
+/alias {cf2 %0} {exercise %0;/alias {lastact %0} {exercise %%0 %0}}
+
+%0 是alias后面全部的东西， %1, %2 .. 直到 %9 分别是前九个由空格分开的
+部分。
+
+-----------------------------------------------------------
+第二重要的就是 action 了。 (zmud 类似的是 trigger)
+格式： /action {trigger信息} {trigger动作} {trigger优先级别}
+trigger优先级别是从 0 到 9 的数字，如果缺省掉就是 5 ，级别数字越小
+越优先处理。
+原来 tintin++ 设优先权的目的是为了在有很多 trigger 的时候能够
+让一些重要的 trigger 可以很快执行，但是现在机器越来越快，这已经
+不是要考虑的因素了， zMud 没有设优先级别大概就是考虑到这点，但是
+恰恰是这点，使得 tintin++ 比 zMud 更强大。
+那么到底这个优先级别有什么好处呢?
+
+例一：
+下面是我的常用的 action:
+/act {m【%0】} {/nop} {3}
+/act {$_CYN%0说道：} {/nop} {3}
+/act {(%0)告诉你：} {/bell} {4}
+一、二行是空的 trigger, 就是说，碰到这种情况什么都不做。用处如下：
+假设我还有一个 action:
+/act {红孩儿死了} {w;get jingang;e;e;fly changan;...}
+因为没有故意设 trigger 优先级别，级别是 5 。
+如果没有以上三个高级别的 trigger, 如果你看到：
+【闲聊】慧缈(Miaom)：红孩儿死了。
+或者：
+捣蛋鬼(Daodan)告诉你：红孩儿死了。
+捣蛋鬼说道：红孩儿死了。
+那么你的 action 就会被误激发，好多人因此不敢开 chat, block tell，
+少了不少乐趣，而且还是避免不了被第三种情况 trigger 。
+但是现在，因为有高级别的 trigger 优先，你可以不怕这种情况。
+( 当然在网络慢或者在一段信息换一个 packet 传送时，低级别的 trigger
+在整句话来完整前就可能被提前 trigger, yTin 知道这个 bug 的存在，但是
+概率不大，且修起来会有别的重大牺牲，所以暂时不修。
+这和 zmud 或者老的 tintin++ 有时候 trigger 不灵的 bug 是类似原因。 
+yTin 在这点上已经修好，不会有单一的 trigger 不灵。 )
+注意：【闲聊】其实前面有颜色的 ansi code 的，为了包括其他颜色，例如
+【谣言】, 我笼统地加一个 m, 因为这是所有 ansi escape 的结尾。
+$_CYN 在前面一讲的 ansi.sc 里面有定义，是天青色。注意大多数例子
+download 时要同时按住 shift 键，以确保 binary 模式。
+
+例二：
+这次大家要好好看看 esc.sc 里面的 actions :
+当然 esc.sc 是需要 ansi.sc 的。
+/act {你$_RED受伤} {Hurt -5} {1}
+/act {$frd$_RED受伤过重，已经有} {fHurt0 -1} {2}
+/act {$frd$_RED受伤过重，已经奄} {fHurt0 -5} {2}
+/act {$_RED受伤过重，已经有} {eHurt0 -1} {3}
+/act {$_RED受伤过重，已经奄} {eHurt0 -5} {3}
+
+例子呢？
+第一行优先权最高，当然是你受伤的情况。但是有可能被人捣乱：
+例如有人叫“骚扰你”，他死的时候可能会激发你的 trigger 。
+这时候如果你忍无可忍，可以加上：
+/act {骚扰你$_RED受伤} {/nop} {0}
+0 的优先级别最高，一般留着不用应急。
+当然希望这样的恶意玩家不多，不是所有人能忍受为某个特地的
+人改 trigger 的。 *snicker
+如果是一般的 NPC 等等受伤过重，当然是第三类优先的 trigger
+触发了，第二类呢？你可以：
+/var frd {黄狮精}, 这就专对 黄狮精 作 trigger 了。
+这个 frd 变量可以不断变。而且受伤的程度被抓入，统一由
+fHurt0 处理。
+(注：好象现在 frd 变量我赋值的都是妖怪，最初我设这个
+trigger 是让网慢的朋友 follow 我，我看他/她的状态逃跑，
+frd是 friend 的简写。)
+
+现在大家知道为什么 yTin 比 zMud 好了吧？
+
+当然有一个重要的注意事项：action 后面能用 $0 代替 %0 的地方
+都用 $0 代替的好，如果需要用到 %%0, %%%0, 最好在最初赋值：
+/var arg0 $0, 后面一直用 $arg0 代替 %%0 等。
+否则碰上恶人。。。 *heihei 
+自己的 script 不要原封不动地给别人看，否则万一你疏忽了，
+可能就有麻烦。详细原因看 /help action 。
+
+-----------------------------------------------------------
+下一个该式 tick timer 了。
+要打开 tick timer, 命令是：
+/tickon 打开，
+/ticksize 300 设成 300 秒的 tick。
+然后要对 tick timer 显示的信息作 action:
+/act {^#TICK!!!} {tick}, 以后改 tick 这个 alias 就可以了。
+#TICK!!! 前面为什么加 ^ 呢？看 /help action, 主要是防止别人
+捣蛋。
+
+关闭 tick 用 tickoff 。
+那为什么搞这么复杂呢？能不能一步到位，每隔 300 秒送一个
+alias tick 的命令？这里面有个小小的考虑，如果你玩的 mud
+里有个 tick 的命令，由 ytin 程序里设了 alias 有些麻烦。
+yTin 的 tick 提示以后可以改动，防止别人捣蛋。
+但是更好的方法我们会提到：用 /sleep 命令你可以加任意多
+咱设 tick, 而且不会被人干扰，也不会因为 tick 太短屏幕滚动
+加倍。
+
+大家看 que.sc 这个例子，最后的两行定义了 tick+ 和 tick-
+两个 alias 。
+使用例子如下：
+/var ext 1
+/alias F2 {/if {$ext} {exert recover}}
+
+tick+ F2 0.5
+这句话设 F2 每 0.5 秒 exert recover 一次，要比 trigger 还要管用。 :D
+
+tick- F2
+这句话关闭 F2 这个 tick 。
+
+------------------------------------------------------------
+#session 命令
+/help session 吧！
+对了， tintin 中 /zap 相当于 zmud 中 /disconnect, 简写 /z 就行。
+以前 tintin 有个缺陷，没有自动不断 login 的功能。
+yTin 加了 dummy session 的功能，如果 port 是 0, 会模拟一个
+session, 但不连线到别的地方，主要是用来打开 tick timer
+自动 login.
+
+如果要检查 session nut 是否还连线，可以用：
+/ses nut
+得出的结果可以 trigger action 。
+
+------------------------------------------------------------
+Chitchat
+ps.: 下一讲是否该讲讲 #system 功能和一些机器人的例子了？
+大家最好 install 一份 perl (for win32):
+http://www.activestate.com/ActivePerl/
+
+如果喜欢用 C 编程，可以找一份 Turbo C 3.0 。
+当然也可以用 MSVC 编写 32bit Console application 或者
+更好的，编写 dll 文件。
+

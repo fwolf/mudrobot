@@ -1,0 +1,112 @@
+这一讲补充一些我收到的问题。
+
+-----------------------------------------------------------
+怎么作有颜色的 trigger?
+
+这点新的 zMud 有个功能，可以带颜色 copy。 yTin 本来是设想加上
+的，但是考虑到会增加好多内存或者计算，还是介绍大家用“传统”
+方法：
+/log 1.tmp
+.....
+/log
+这样那些信息就都在 1.tmp 里面，用一个可以处理控制符的编辑器
+就可以修改/copy/paste。
+用 /log 有个好习惯建议大家使用：
+/log;/log 1.tmp
+这样不管前面是否正在 log, 都不会出错。
+当然大多数颜色我已经列在 ansi.sc 里面了。
+
+------------------------------------------------------------
+带颜色的 trigger 太头痛了，可不可以不要颜色？
+
+/toggle stripcolor 1 就可以了。
+不过建议大家从一开始就用带颜色的 trigger, 因为好处太多了。。
+个别情况下把颜色吗去掉再 action 可能更好些，例如在东方神话
+里面挑天赋。。。。
+
+-----------------------------------------------------------
+怎样 autologin? 当然是用 dummy session 了。
+
+/help session
+下面是我自动 login 到东方神话的 alias:
+
+/var _ses undefined
+/var _ticksize 30
+/al iam {/se ox #connected_to_ox... 0;/ox /al quit /tickoff;/ox /tickon;/ox /ticksize $_ticksize;/ox /al tick00 %0;/ox /act {^#TICK!!!} {/ses $_ses};/ox /act {#SESSION %0 IS NOT DEFINED} {tick00;/sleep 0.5;/$_ses};/ox /ses $_ses}
+/al iamel {/var _ses %1;iam {el %%1;/var autoft 1}}
+
+注意：这里解释一下 {tick00;/sleep 0.5;/$_ses} 的意思。由于一个小原因，新的
+session 不在最上面，看不到，我等半秒种后把它放到最前面，可能有更好的方法。
+用法例子： iamel nut
+
+------------------------------------------------------------
+yTin 加了个 /ctoi ，是怎么用的？
+
+/ctoi {x} {九百四十} 
+再看看 /var x 吧。
+
+例一：
+judge.sc 回答大多数 es2 lib 改写的法官提问。
+
+例二：
+hp.sc, 当你在东方神话打 hp 的时候，你的各项参数就被抓下来了。
+其中抓道行值的几个 trigger 虽然麻烦，但是又是一个很好的教程。
+
+
+-----------------------------------------------------------
+zMud 下有在探春那里对诗的机器人，但是茶博士就不是那么好糊弄的了。。。
+
+最早的对诗机器人是 洋葱头(Onion) 在 tintin 里加了 /poem 命令
+写出来的，后来有不同版本的 C 程序可以在 tintin 下用 /system
+和 /textin 或者 /read 一起运行。
+zMud 的对诗机器人是因为正好有 grep 这个函数，所以不难。
+要对付茶博士，好象要用一些自写的 plugin 。
+
+yTin 保持了 tintin++ 的 #system 功能，但是因为是在 windows 下，
+所以结果就有些烦人了。。。但是是必不可少的工具！！
+(鉴于我编程水平有限，还不能隐藏那些 DOS PROMPT，唯一做到的是
+在 Windows NT 下跑 16-bit 的 DOS *.exe 文件，可以隐藏起来。
+如果谁知道怎么改进，请指教。)
+好消息： 1.82a 以后的版本，加上 ActiveState Perl 5.6 build 616+
+(build 616 有 bug), 可以用 perl 而不出 dos prompt, 因为调用了
+perl56.dll .
+
+需要文件：
+poem.pl, poem.300
+其中 poem.pl 在这里的名字是 poem.pl_, 大家要改名一下。
+poem.300 download 完，要在 你 run ytin 的当前目录下建子目录 help,
+存到子目录里去，或者改 poem.pl 的第一句。
+
+要用的 trigger 等如下：
+(Poem 这个 alias 过 荆棘岭也管用，用法： Poem 诗句。。。 1)
+/var _poem poem
+/al afterPoem /nop
+/al Poem {/if {[%%0!=$_poem]}{/var _poem %%0;/sys perl poem.pl %%0;/read poem.cmd};afterPoem}
+/act {茶博士提笔在墙上写道：%0} {Poem $0}
+/act {当前题目：　　　%0}{Poem $0}
+
+需要安装 Perl 且在 yTin 的 option 里面指定正确的 perl*.dll
+Perl 的 URL 在 lesson02.txt 末有。
+
+==================================================================
+ytin1.80i1 以后的版本可以不用 perl 或者外加程序对诗：
+优点：方便，在 windows 下没有恼人的 dos prompt
+缺点：慢。在 Linux Dual i686-450MMX (512M) 下 1500 行要执行 20 秒，
+Win98 P150 (32M) 下 50 秒，不知道为什么在 win98 PII350 (256M) 下反而要 100 秒。
+建议：还是用 perl 方便且快。特别是 yTin1.82 版本以后，不再存在这些缺点。
+
+需要：func.sc, 在 tintinrc.txt 里面读入 func.sc (必需！别忘记)
+      poem.sc 备用。
+上面的 alias 照抄，但是把 Poem 换成：
+/al Poem {/if {[%%0!=$_poem]}{/var _poem %%0;/read poem.sc;poem1 $_poem}}
+==================================================================
+
+(yTin 以后的 feature list:
+增加 #system 对 *.dll 的支持，--1.82a 以后已经支持 perl56.dll
+当然最好是能将 dos prompt 藏起来。
+
+如果有谁能帮忙完成这些中的若干，不胜感激！！)
+
+------------------------------------------------------------------
+待续。。。。
+

@@ -1,0 +1,78 @@
+#!/usr/local/bin/perl -w
+$dbase = "task.map";
+%path = ("w", "e", "s", "n", "d", "u",);
+
+if($#ARGV>=1){
+	$name = $ARGV[0];
+	$place = $ARGV[1];
+}
+else
+	{print "syntax: perl tscan.pl name place\nexample: perl tscan.pl nut tongtian\n"; exit(1);}
+$cmdfile = "tscan.$name.sc";
+
+if(!open(DBASE, "<$dbase")){
+	print "cannot open $dbase to read!\n";
+	exit(2);
+}
+if(!open(CMD, ">$cmdfile")){
+	print "cannot open $cmdfile to write!\n";
+	exit(3);
+}
+
+while(<DBASE>){
+	chomp;
+	@line = split(/:[ \t]*/, $_, 2);
+	@line0 = split(/\//, $line[0]);
+	foreach(@line0){
+		if($_ eq $place){
+			@seq = split(/;;/, $line[1]);
+			$cmd="/nop\n/al seq0 /nop\nclrSeq\nset brief 1\n/var OUTDOOR 0\n";
+			for($i=0;$i<=$#seq;$i++){
+				$cmd = $cmd."seq+ {/var outdoor$i 0;/var nYaoguai 1;$seq[$i];l}\n";
+				if($i>0){
+					$cmd = $cmd."/al rseq$i {";
+					@seqs = split(/;/, $seq[$i]);
+					for($k=$#seqs;$k>=0;$k--){
+						if($seqs[$k] eq "left"){
+							$cmd = $cmd."right";
+						}
+						elsif($seqs[$k] eq "right"){
+							$cmd = $cmd."left";
+						}
+						elsif($seqs[$k] eq "enter"){
+							$cmd = $cmd."out";
+						}
+						elsif($seqs[$k] eq "out"){
+							$cmd = $cmd."enter";
+						}
+						elsif( (substr($seqs[$k],0,4) eq "fly ")
+								|| (substr($seqs[$k],0,4) eq "/var") ){
+							$cmd = $cmd.$seqs[$k];
+						}
+						else {
+							for($l=0; $l<length($seqs[$k]); $l++){
+								while(@paths = each(%path)){
+									for($m=0;$m<=1;$m++){
+										$cmd=$cmd.$paths[1-$m] if($paths[$m] eq substr($seqs[$k], $l, 1));
+									}
+								}
+							}
+						}
+						$cmd = $cmd.";" if($k!=0);
+					}
+					$cmd = $cmd."}\n";
+				}
+			}
+			$cmd = $cmd."/al endSeq {set brief 3;huti 0;/if {\$autotask>1}{lsh fo} else {lsh 1}}\nseq\n";
+			print CMD $cmd;
+			close CMD;
+			close DBASE;
+			exit(0);
+		}
+	}
+}
+print CMD "Cancel\n";
+
+close CMD;
+close DBASE;
+exit(0);

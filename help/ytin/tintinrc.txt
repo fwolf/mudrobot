@@ -1,0 +1,31 @@
+/nop 这是注释， nop == null-operation
+/chr {ctrlG} {7}
+/chr {_ESC} {27}
+/al showg /showme {${_ESC}[32m%%0${_ESC}[2;37;0m}
+/nop el is 东方神话
+/al el {/ses %1 {202.105.177.101 6666};/var name %1;/var passwd %2;/var tickon 1;/cd el;/cd ../el;/read el.sc}
+/nop shj 山海经
+/al shj {/ses %1 {fate.digital-genesis.com 6969};/var name %1;/var passwd %2;/cd shj;/cd ../shj;/read shj.sc}
+/al login1 /nop
+/var tickon 1
+/act {您的英文名字：} {login1;/if {[$name!=]} {$name}}
+/al 1st /nop
+/act {请输入密码：} {/if {[$passwd!=]} {$passwd;1st;/if {$tickon}{/tickon}}}
+/act {^#TICK!!!} {tick};/al tick time
+/ticksize 300
+
+/al ee {/%1 e}
+/al ss {/%1 s}
+/al nn {/%1 n}
+/al ww {/%1 w}
+
+/toggle speedwalk 0
+/mess read 0;/mess var 0;/mess act 0;/mess alias 0;/mess sub 0;/mess highlight 0
+
+/nop /dim 192 255;/nop this is my favorate ansi color
+
+/read ansi.sc
+/read esc.sc
+/read alias.sc
+/read act.sc
+

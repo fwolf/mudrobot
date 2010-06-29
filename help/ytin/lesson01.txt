@@ -1,0 +1,106 @@
+简介 tintinrc.txt 例子
+---------------------------------------
+第一句是：
+/nop 这是注释， nop == null-operation
+
+第一行第一个字是 yTin/tintin 的命令字符。default 是
+#, 就跟 zMud 类似，命令是: #alias, #variable ... 等等。
+我喜欢用 /, 一个手指就可以敲。
+/nop 是注释，它以后到一行结束或者第一个在 { } 外的 ; (分号) 都是注释。
+
+第二句：
+/chr ctrlG 7
+
+将变量 ctrl-G (十六进制的 0x07) 赋予 ctrlG, 这在 ansi 解释中是个 beep 。
+有事情找别人可以 tell nut $ctrlG, nut 就会听到一声 beep 。
+
+第二、三句:
+/chr {_ESC} {27}
+/al showg /showme {${_ESC}[32m%0${_ESC}[2;37;0m}
+
+/showme 干什么的？在 yTin 中敲 /help showme 看看啦！
+但是 showg 将要显示的东西显示成绿色，是我常常喜欢用的。
+大多数颜色我在 ansi.sc 的例子里举到。
+
+下一句：
+/al el {/ses %1 {202.105.177.101 6666};/var name %1;/var passwd %2;/var tickon 1;/cd el;/cd ../el;/read el.sc}
+
+/al 是 /alias 的简称。在用 el 的时候，我们同时将第一个字符赋给 name,
+第二个赋给 passwd, 同时将 tickon 设为 1 。
+/cd 是改变目录，如果不成功或者没有后缀，就显示当前目录。
+为什么 /cd 两次呢？因为我有的时候到 shj 的时候目录已经是 ./shj, 要 cd
+到 ./el 这样保险些。
+
+下面两句要一起看：
+/al login1 /nop
+/act {您的英文名字：} {login1;/if {[$name!=]} {$name}}
+
+/action 相当于 zMud 的 #trigger 。 (help action, 和 zMud 有很大不同。)
+我在这里 /alias login1 /nop, 就是说， login1 暂时什么都不做，但是以后
+可以改动。我不太喜欢用 /action, /unaction 来控制，经常敲错一点就大不
+一样。
+建议的手段是：
+/act {受伤...} {hurt}
+/alias hurt {eat yao}
+这样如果不想 eat yao, 可以直接改 hurt 的 alias, 例如：
+/alias hurt /nop
+/alias hurt quit
+
+再看：/if {[$name!=]} {$name}
+如果你赋于 name 你的 id 了，就会自动输入，[ ] 里面表示是两个字符串比较。
+!= 前面是 $name, 后面是空的，如果条件正确，表示 $name 是空字符或者没有
+赋值。
+
+下面两句类似：
+/al 1st /nop
+/act {请输入密码：} {/if {[$passwd!=]} {$passwd;1st;/if {$tickon}{/tickon}}}
+
+平时输入密码后第一件事是什么也不做，但是如果：
+el nut 99999;/al 1st y
+那么如果密码正确，第一件事是 y (重新连线？)
+下面两种用法是救命的：
+el nut 99999;/al 1st {hp;quit}
+看一下 hp, 马上 quit, 就是气血负了也不会死的，同时查看一下在哪里 login。
+el nut 99999;/al 1st {eat yao;exert recover;hp;quit}
+这个是准备吃药救命，但是如果没有药，也不会死，因为还有 quit 垫底。
+当然如果是风云，吃药 busy, 而且一颗药救不活的话， quit 不掉，血的教训。 :D
+
+下面两句话是很方便的：
+/act {^#TICK!!!} {tick};/al tick time
+/ticksize 300
+
+要改 tick 只要改 tick 的 alias 就可以了。注意用 /tickon 打开 tick
+才行。
+以后我们会介绍怎样在 yTin 中开/关无穷个自己设的 tick, 有了这个，
+每 0.5 秒 exert recover? 太过份了！
+
+这一句：
+/al ee {/%1 e}
+有没有发现 ee 14 要比 /14 e 方便？因为如果路不熟，你当然先想方向，
+然后才想走几步。
+
+这句：
+/toggle speedwalk 0
+
+相当于 /speedwalk, 但是 yTin 中新的命令 /toggle 更合理些，喜欢
+speedwalk 吗？有没有试过做 semote: wuwu ?
+当然 yTin 中的 speedwalk 改进了不少，自动判断 sw , 不用再
+/alias {sw} {southwest}。另外， sw 和 southwest 是不完全一样的。
+严格来讲， sw = go southwest 。
+
+下一句是给熟悉 tintin 的人用的，新手其实应该都设成 1
+/mess read 0;/mess var 0;/mess act 0;/mess alias 0;/mess sub 0;/mess highlight 0
+
+下面几句嘛：
+/read ansi.sc
+/read safe.sc
+/read alias.sc
+/read act.sc
+
+别搞那么长的 tintinrc.txt 啊，有些东西分类放更好些。
+ansi.sc 和 safe.sc 有例子，大家可以看看。
+
+-------------------------------------
+Chitchat
+.
+

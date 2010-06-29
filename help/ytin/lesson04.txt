@@ -1,0 +1,56 @@
+发现了一个不错的 URL:
+http://www.leo.org/pub/comp/os/dos/gnuish/index.html
+这里可以找到比较新的准官方的有些 unix 命令的 GNU-win32 port.
+这一课里有些例子要用到：
+
+============================================================
+yTin 对于想用 MudOS 的 edit 命令编辑文件的巫师是一大福音！！
+
+众所周知， MudOS 的 edit 命令是模拟 Unix 下 ed 命令的行编辑器。
+因为 MudOS 的本质，不太可能也不值得搞出更好用的编辑器。
+yTin 因为有 bug free 的 log 命令，再加上我用 LPC 写的 uuencode.c
+和 uudecode.c，就可以很方便地编辑所有的文件(包括一般情况下
+edit 不能处理的 binary 或者每行极长的文件)。
+
+准备工作：
+1) download 这个目录下的 uuencode.c 和 uudecode.c, 放到你的
+mud 里面去，例如放入 /cmds/wiz/, 如果不想 reboot mud, 可以
+rehash /cmds/wiz, 然后 update /cmds/wiz/uuencode 和
+update /cmds/wiz/uudecode. 目前 uudecode 效率不太高，对大
+文件速度较慢，有兴趣的人可以加以改进。
+
+2) download 一份 uudecode/encode.exe for win32:
+ftp://ftp.leo.org/pub/comp/os/dos/gnuish/uuencode.zip
+把里面的 uudecodb.exe 和 uuencodb.exe 解压到系统的 path
+里面，例如 c:\bin ，然后 rename 成 uudecode.exe 和 uuencode.exe.
+注意不要用 uudecode.exe, 要 uudecodb.exe 再 rename!!!
+
+我在这里也放了一份 uudecode.exe 和 uuencode.exe, 你可以在这里 download。
+我的 c:\bin\ 目录总是放到 path 里面的。如果你的不是，
+在 autoexec.bat 最后一行加上：
+set path=%path%;c:\bin
+然后 reboot 即可。
+(windows NT/2000 不是靠 autoexec.bat 来改变的，不再多说基本常识。)
+
+3) 在 tintinrc 里面加上：
+/var begin 0
+/al nvi {/var begin 1;/log;/log edit.uu;/var filename $0;uuencode $0 edit.c}
+/act {^end} {/if {$begin}{/var begin 0;/log;/sys uudecode edit.uu {3};/sys notepad.exe edit.c {3}}}
+/al nvi2 {/sys uuencode edit.c $filename > edit.uu;rm $filename.uu;edit $filename.uu;O;/tex edit.uu;.;x;uudecode $filename.uu;rm $filename.uu}
+
+如果是在 Unix 下，就更方便些：
+只需要 1), 跳过步骤 2), 步骤 3) 改为：
+/var begin 0
+/al nvi {/var begin 1;/log;/log edit.uu;/var filename $0;uuencode $0}
+/act {^end} {/if {$begin}{/var begin 0;/log;/sys uudecode -o edit.c edit.uu;/sys vim edit.c {3};/sys uuencode edit.c $filename > edit.uu;rm $filename.uu;edit $filename.uu;O;/tex edit.uu;.;x;uudecode $filename.uu;rm $filename.uu}}
+
+例子：
+nvi /cmds/std/kill.c 就可以编辑这个文件了。
+如果是在 windows 下，编辑完了还需要 nvi2 完成把文件传送回 mud 。
+============================================================
+另外一些方便的 Perl 程序及说明：
+check.pl
+
+updata.pl
+
+============================================================

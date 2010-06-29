@@ -1,0 +1,43 @@
+山海经正式开张了，有人抱怨新手太难，
+其实山海经特别容易进入正循环，为了
+给大家一个具体的例子，我整理了一些
+practice, study 的机器人，作为示范。
+基本上只要 30 级特殊内功就可以了。系数高
+的内功要求更低。
+
+0) 如果没有 ytin.exe, download ytin.zip 解压到
+c:\program files\ytin.
+1) download shj_sc.zip, 解压到 c:\program files\ytin
+目录下，注意自己的文件别被例子冲掉了。
+2) 进入 ytin/shj/data 目录, copy chitchat.data 到
+另外一份，如果你的 id 是 aaaa, 就改文件名为 aaaa.data 。
+如果想偷懒，加入你的 passwd 。然后要改的地方是
+/var tizi 一行，输入你自己的根骨 (后天的).
+3) 现在可以 执行 ytin.exe, 进入后 shj aaaa 就连线
+使用 aaaa 这个 id 。进入 mud 后， 输入 "updata" 这
+个命令，会自动把 data/aaaa.data 里面的 force, forcea
+更新。
+4) yTin 很容易可以做到：如果有人炼出东西了，那么就
+检查文件 help/lianyao.txt, 如果是你以前不知道的，那么
+就给你加入这个文件(而且自动帮你分好类)。这个在例子中
+都是现成的了，试炼一下就知道了。 /var loglianyao 这个
+变量控制你是否 log 配方。
+另外还有可以做的就是当需要查询 recipe 时， yTin 自动帮
+你从 help/lianyao.txt 里面找出来。如果找不到，那么会加入
+到最后一行，留待以后你手动补齐(格式：\t原料一\t原料二\n)。
+试试： qq 小老鼠 (qq 是在 lianyao.sc 里面的 alias)
+5) 测试： chktune -- 这个 alias 显示你的效率
+如果 gain > 75, 那么概率上讲有可能进入正循环，如果 gain >100, 那么
+运气再不好，也可以正循环。
+如果 >100, 可以试一下 att 1 这个 alias, 应该把你的内力调
+满到几乎 x2 。
+6) 要读书的，就买一本书，买些包子，酒袋，然后
+/read sc/st.sc, 再输入： idleact 就可以读了。
+7) 要练习 skills 的，如果是练习长拳的， /read sc/pr.sc
+就可以 practice 了，当然用 idleact 开始。
+如果要自动学，或者练习别的功夫，自己编辑一下 sc/pr.sc :)
+
+Good luck!
+
+
+

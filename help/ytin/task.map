@@ -1,0 +1,31 @@
+baoxiang/宝象国: fly baoxiang;n;n;n;s;;n;;s;;s;;e;;w;s;;e;;w;s;;e;;w;s;;n;sw;;n;;s;w;;w;;s;;n;w;;
+yalong/压龙山: fly yalong;wu;su;ed;;wu;;nd;;ne;;ne;;nw;;nd;;ne;;
+chechi/车迟国: chc 0;w;;s;;s;;s;;n;n;w;;w;;n;;s;w;;w;;w;;e;s;;w;;e;s;;n;n;n;;w;;e;n;n;;w;;e;s;w;;e;;e;;e;;e;;n;;w;;e;n;;w;;e;s
+jindou/金兜山: jdou 0;;se;fight yao guai;s;fight yao guai;ne;fight yao guai;ed;fight yao guai;ne;;e;;e;;se;;s
+dudi/毒敌山: fly dudi;nw;ne;ne;;sw;;se;;enter;;out;sw;;sw;;se;;sd;;se;;wd;;se;;ed;;sw;;
+jilei/积雷山: jlei;nw;;ne;;nw;;n;;s;ne;;nw;;ne;;nd;;w;;nw;;ne;;nd;;ne;;
+jingjiling/荆棘岭: fly jingjiling;;wu;;ed;e;;s;;sw;;su;;wd;;sd;;fly jingjiling;e;nw;;n;;ne;;w;;e;e;;
+zhuzi/朱紫国: zhz;s;;s;;e;;w;s;;w;;e;e;;w;n;n;n;;n;;n;;n;;n;;s;s;e;;e;;e;;s;;s;;e;;w;w;s;;n;w;;n;;s;w;;n;;w;;s;;s;;n;w;;s;;n;w;;w;;e;s;;n;n;;s;e;n;;n;w;;e;;e;;e;;s
+pansi/盘丝岭: psi 3;;wu;;sw;;se;;se;;se;;se;;nw;nw;ed;;e;;ne;;se;;nw;sw;w;wu;nw;nw;wd;;nw;;w;;nw;;w;;/var loc2 biqiu;w;;
+qinghua/清华庄: fly qinghua;;e;;sw;;w;;nw;;e;ne;;n;;n;;nw;;fly qinghua;w;;w;;se;;e;;
+qinfa/钦法国: qfg 0;;w;;s;;s;;s;;s;;n;n;;e;;w;w;;e;n;n;w;;e;n;;n;;w;;n;;s;w;;s;;e;;w;s;;w;;n;;s;s;;n;w;;n;;s;w;;w;;e;;e;;
+yinwu/隐雾山: fly yinwu;;ne;;sw;nw;;nw;;se;se;sw;;w;;w;;w;;w;;sw;;sw;;ne;ne;e;e;e;;e;ne;se;;sw;;se;;nw;ne;;e;;e;;e;;
+baotou/豹头山: btou;nu;nu;;sd;;sd;;wu;;wu;;nw;;se;ed;ed;se;;se;;se;;sd;;se;;
+jinping/金平府: jping;;n;;e;;w;n;;e;;w;n;;s;s;s;w;;n;;s;w;;s;;n;w;;w;;s;;n;e;n;;e;;w;n;;n;;n;;
+tianzhu/天竺国: lsh 3;;w;;n;;w;;e;e;;w;n;;e;;e;;n;;s;e;;e;;e;;n;;s;e;;e;;e;;w;s;;w;;e;s;;
+lingshan/灵山: lsh 0;s;;n;;ed;se;s;se;ed;sd;ne;;ed;;n;;e;;e;;e;;e;;n;;s;s;;n;e;;
+pingding/平顶山: fly pingding;n;nw;ne;;se;;se;;se;;nw;nw;s;;nw;;sw;;wd;;eu;ne;s;;se;;sw;;se;;s;;
+wuji/乌鸡国: fly wuji;e;e;e;e;e;eu;;se;;eu;;n;;s;su;;nd;e;;se;;ed;;e;;w;wu;nw;w;wd;nw;wd;;sw;;w;;e;ne;ne;;ne;;ne;;ne;;eu;;ne;;
+tongtian/通天河: fly tongtian;s;s;s;s;s;;n;;n;;e;;w;n;;n;;n;;s;w;;s;;w;;n;;w;;s;;
+nuerguo/女儿国: fly nuerguo;n;n;w;w;e;;w;;e;nu;;sd;e;;s;;w;;w;;s;;s;;n;e;;e;;se;;e;;n;;s;w;s;;
+firemount/火焰山: fly firemount;wu;su;wu;su;e;e;;w;;w;;nd;;ed;;nd;;ed;;n;;ne;;nw;;nu;;sd;;
+jisaiguo/祭赛国: fly jisaiguo;n;n;n;n;s;;n;;s;s;;s;;s;;w;;w;;e;e;n;n;n;n;;w;;w;;e;e;;e;;e;;ne;;sw
+xiaoxitian/小西天: fly xiaoxitian;;s;;sw;;s;;n;ne;;e;;e;;w;n;;s;s;;n;w;;n;;nw;;nw;;n;;w;;e;s;;e;;ne;;e;;e;;e;;se;;e;;
+qilin/麒麟山: fly qilin;left;;left;;left;;left;;left;;left;;left;;
+biqiu/比丘国: bqiu 0;;e;;s;;sw;;ne;se;;nw;n;e;;n;;w;;nw;;se;ne;;e;;e;;s;;n;e;;w;se;;e;;e;;w;w;s;;sw;;e;;w;se;;w;;e;se;;s;;
+wudidong/无底洞: wdd 0;;e;;ne;;nu;;ed;;se;;e;;e;/var loc2 biqiu;;e;;n;;s;s;;n;e;;w;w;;
+fengxian/凤仙郡: fxian;n;n;;s;;s;;s;;s;;n;w;;n;;w;;n;;s;s;;n;w;n;n;;s;;s;;s;;s;;n;n;w;;n;;s;s;;w;;s;;n;n;;n;;s;w;;n;;s;s;;w;;e;;s
+yuhua/玉华县: yhua;w;w;;e;;e;;e;;e;;w;w;s;;e;;w;s;;w;;e;s;;w;;e;e;;w;s;;s;w;w;w;;e;;e;;s;;n;e;;e;;s;;n;e;;e;;w;;w;;
+zhujie/竹节山: fly zhujie;ne;nu;nw;ne;nu;e;e;se;ne;nu;ne;nw;w;w;w;sw;sw;se;;e;;e;;se;;ne;;nu;;ne;;nw;;w;;w;;w;;sw;;sw;;se;;sd;;sw;;se;;sd;;sw;;sw;;sw;;
+qinglong/青龙山: fly qinglong;;sw;;se;;sd;;se;;s;;
+maoying/毛颖山: lsh 2;sw;se;s;s;s;s;sw;s;se;se;;sw;;su;;nd;sw;;sw;;su;;se;;se;;e;;e;;e;;nd;;ne;;nw;;nw;;wd;;nw;;wd;;su;;nd;sw;;ne;ne;;

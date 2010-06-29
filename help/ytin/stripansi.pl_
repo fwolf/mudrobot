@@ -1,0 +1,51 @@
+#!/usr/bin/perl -w
+
+$exclude = "ytin.exe tt++";
+
+if($#ARGV>=0){
+ $File = $ARGV[0];
+}
+else {
+	print "Syntax: stripansi.pl filename\n  Make sure you backup your original file 1st!\n";
+	exit(1);
+}
+
+undef $/;
+
+doFile($File);
+exit(0);
+
+sub doDir
+{
+	my($dir) = @_;
+	my @ls;  #here we copy the $dir and @ls to each local copy
+	my $file;
+	print "Processing dir $dir ...\n";
+	opendir(DIR, $dir) || die "cannot opendir $dir: $! \n";
+	@ls = readdir(DIR);
+	closedir DIR;
+	foreach $_ (@ls){
+		next if($_ eq "." || $_ eq "..");
+		$_ = $dir.$_ if(!($dir eq "./"));
+		next if(-l $_); #usually symbolic links are duplicated
+		if(-d $_) {doDir($_."/");}
+		elsif( (-f $_) && !(m|$exclude|g) ){
+			doFile($_);
+		}
+	}
+}
+
+sub doFile
+{
+	($file) = @_;
+	open(FILE, "<$file") || die "cannot open file $file to read!\n";
+	binmode(FILE);
+	$_ = <FILE>;
+	if( s|\e\[[^m]+m||g ){
+#		print "   procession $file ...\n";
+		close(FILE);
+		open(FILE, ">$file") || die "cannot open file $file to write!\n";
+		print FILE $_
+	}
+	close(FILE);
+}

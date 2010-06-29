@@ -1,0 +1,130 @@
+#!/usr/bin/perl -w
+$option = "ak";
+@options = ("0", "fd", "gv", "ak", "kl", "wp", "am", "cl", "wr", "fn");
+$match = 0;
+$Match = 0;
+$MATCH = 0;
+$BACK = 0;
+$chname2 = "";
+
+$cmdfile = "autoq.$ARGV[0].sc";
+if(!open(CMD, ">$cmdfile")){
+	print "cannot open $cmdfile to write!\n";
+	exit(3);
+}
+print CMD "/nop\n";
+
+if($#ARGV>1){
+#	$myname = $ARGV[0];
+	$option = @options[$ARGV[1]];
+	$chname=$ARGV[2];
+	$chname2=$ARGV[3] if($#ARGV>2);
+}
+else {
+	print "syntax: perl autoq.pl name type quest \nexample: perl autoq.pl nut 3 ´óºÍÉÐ ·ðÑ§\n";
+	print CMD "Error\n";
+	close(CMD);
+	exit(1);
+}
+
+$dbase = "help/quest_".$option.".txt";
+
+if(!open(DBASE, "+<$dbase")){
+	print "cannot open $dbase to read/write!\n";
+	exit(2);
+}
+
+$gvcmd="";
+$gvstuff=0;
+while(<DBASE>){
+	chomp;
+	if(ord($_)>127) {
+		@line = split(/,[ \t]*/, $_, 4);
+		@line0 = split(/\//, $line[0]);
+		for($i=0; $i<=$#line0; $i++){
+			if($line0[$i] eq $chname){
+				$match=1; #temp flag
+				$MATCH=1; #this is for check if will append unknown quest
+				$idStuff=$line[1];
+				$idstuff = $line[2];
+				@line1 = split(/\//, $line[1]);
+				print CMD "/var nameStuff $chname;/var idStuff $idStuff\n";
+			}
+		}
+	}
+	elsif($match){
+		$match=0;
+		if(length($_)>2) {
+			$Match=1; #check if any real solution is there
+			if($ARGV[1]==3){ # _ak
+				$cmd = "/al scanact {ask $line1[0] about $chname2";
+				for($i=1; $i<=$#line1; $i++){
+					$cmd = $cmd.";ask $line1[$i] about $chname2";
+				}
+				$cmd = $cmd."}\n";
+				s/;;/;scanact;/g;
+			}
+			elsif($ARGV[1]==2){ # _gv
+				$cmd = "/var idGivee $idStuff;/var idGv $idstuff\n";
+				$cmd = $cmd."/al scanact {give \$idGv to $line1[0]";
+				for($i=1; $i<=$#line1; $i++){
+					$cmd = $cmd.";give \$idGv to $line1[$i]";
+				}
+				$cmd = $cmd."}\n";
+				s/;;/;scanact;/g;
+			}
+			else{
+				s/;;/;get $idStuff;/g;
+				@line1 = split(' ', $idStuff);
+				$cmd = "/al {gbuy %0} {bid 10 silver;/2 drop 100 silver";
+				if(length($idstuff)>1)
+					{$cmd = $cmd.";buy $idstuff from %0";}
+				else {
+					$cmd = $cmd.";buy $idStuff from %0";
+					if($#line1>0){
+						$cmd = $cmd.";buy ";
+						for($i=0; $i<=$#line1; $i++){
+							$cmd = $cmd.$line1[$i];
+						}
+						$cmd = $cmd." from %0";
+						for($i=0; $i<=$#line1; $i++){
+							$cmd = $cmd.";buy $line1[$i] from %0";
+						}
+					}
+				}
+				$cmd = $cmd.";/2 get silver}\n";
+				s/\[([^]=]*)\]/gbuy $1/g;
+				if(length($gvcmd)) {$gvcmd = $gvcmd.";";}
+				$gvcmd = $gvcmd."give $idStuff to \$givee";
+			}
+			$BACK=1 if(/Back/ || /Cancel/ || /scan /);
+			$gvstuff=1 if(/gvstuff/);
+			if(/;\(([^)=]*)\);/){ #random food
+				$end=$';
+				if(!$BACK){
+					$BACK=1;
+					$end=$end.";Back";
+				}
+				$_ = $`.";/al qqBuy {/sleep 1;/5 {buy $idstuff from $1;drop $idStuff};qqGet};/al qqGet gGet {/if {\$gotit || \$npcdead}{/2 get silver;$end;/al bFromWhom /nop} else {qqBuy}};bid 10 silver;/2 drop 100 silver;/var npcdead 0;/al bFromWhom {/var npcdead 1};qqGet";
+			}
+			s/;$//g;
+			$cmd = $cmd."/al qqact {".$_."}\nqqact\n";
+			print CMD $cmd;
+		}
+	}
+}
+if($Match==0){
+	print CMD "Cancel0\n";
+}
+else {
+	print CMD "/al gvstuff"."$ARGV[1] {$gvcmd}\n" if(!$gvstuff);
+	if($BACK==0){print CMD "Back\n";}
+}
+if($MATCH==0){
+	print DBASE "$chname, ,\n\n"; 
+}
+
+close CMD;
+close DBASE;
+
+exit(0);

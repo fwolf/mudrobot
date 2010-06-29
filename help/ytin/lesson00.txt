@@ -1,0 +1,35 @@
+安装 yTin
+-----------------------------------------
+建议将 yTin 装在 c:\program files\yTin\ 目录下。
+基本的文件有：
+ytin.exe (从 ytinXXX.zip 或者 ytinXXX_s.zip 解压。)
+tintinrc.txt
+tt_help.txt
+另外你还可以自己编写一个 tab.txt (/help retab).
+
+如果多人用 yTin, 可以自己建个目录，放入自己的 tintinrc.txt,
+再做一个 shortcut 连接到 c:\program files\ytin\ytin.exe,
+注意要将运行目录设成自己的目录。
+
+-----------------------------------------
+如何开始：
+我建议将 tintin 的命令字符 (default char) 由 # 改为 / 。
+我提供的 tintinrc.txt 第一句第一个字是 /, 所以命令字符就是它。
+
+预先设了两个 alias: el 和 shj 。
+假设你在东方神话里面有个角色叫 nut, 密码是 99999, 那么你在
+命令行敲入：
+el nut 99999
+就可以连进来了。当然这个密码是错的 :D
+如果你只敲：
+el nut
+那么到时候密码那行就不会自动输入，要你自己输入密码。
+
+当然假设你要到一个 mud, ip 是 123.4.5.6 6666, 那么你
+可以临时敲入：
+/session xxx 123.4.5.6 6666
+就可以连线，如果常常用，可以做 alias (help alias)。
+
+-----------------------------------------
+by Chitchat
+

@@ -1,0 +1,60 @@
+东方神话新近投胎了一批老妖怪，要做膜拜任务，现在讲讲到了新的 mud,
+怎么从头写这种机器人。
+最方便的是能挖到源码，批处理一下就可以填答案了，不过还是看看正解是
+什么吧。
+先 download autoq.pl0, 改名成 autoq.pl, 放在当前目录里待用。
+当然 perl56.dll (build 617 或者更新的版本) 必须在。 View->options
+里面可以设路径。
+再在当前目录下建两个目录： help/ 和 cmd/ 待用。
+编辑一个空文件 quest_log.txt 放到 help/ 目录里。
+
+现在身上拿个 100 多两银子，做一个 action, 就可以 log 信息了：
+/act {魏徵：%0。} {/sys perl autoq.pl $name log $0;/sleep 8;give wz 1 silver;mobai;quest} {6}
+
+多等一会就可以看看 help/quest_log.txt 怎么样了。。。
+例子如下：
+限你四分十秒之内让读书人去见阎王
+
+限你四分零秒之内吃掉守门牛精
+
+限你十分五十秒之内别让石像鬼魂再见到精细鬼
+
+过八分二十秒之后，找回宫裙给石像
+
+在四分十秒的时间内，让差官去见阎王
+
+限你四分十秒之内别让石像鬼魂再见到祭赛国武士
+
+限你八分二十秒之内吃掉鲸无敌
+
+限你四分十秒之内拿蒸酥去祭神
+
+....
+根据这些例子，就必须决定是用什么 action 抓 trigger 。
+如果是很简单的模式，就可以多做几个 action, 例如:
+/act {让%0去见阎王。} {/var qtype kl;/var quest %0;qact}
+/act {吃掉%0。} {/var qtype kl;/var quest %0;qact}
+/act {再见到%0。}{/var qtype kl;/var quest %0;qact}
+/act {找回%0给} {/var qtype gt;/var quest %0;qact}
+/act {拿%0去祭} {/var qtype gt;/var quest %0;qact}
+
+这里用 %0 而不用 $0 做 trigger 的后半部，是因为新的 yTin 基本已经
+不受 ; 的干扰，而碰上有颜色的，这样处理更好。
+
+注意上面抓魏徵：的 trigger 优先权是 6, 比普通的已知状态的权限低，
+这样碰到例外的 trigger 才会被触发，存到 quest_log.txt 供以后参考，
+解决掉的可以 delete 掉。
+
+第二步：
+在 help/ 目录下写两个空文件：
+quest_kl.txt 和 quest_gt.txt
+
+然后写些这些 trigger:
+如果你没有自动设好 name 这个变量，设好它，例如：/var name test
+新手最好设 dokill 0, 安全了可以设 dokill 1
+/var dokill 0
+/al qact {/if {[$qtype=kl] || [$qtype=gt]}{/sys perl autoq.pl $name $qtype $quest;/if {[$qtype=kl] && $dokill=0}{Cancel} else {/read cmd/autoq.$name}} else {Cancel}}
+
+待续。。。
+可以看看 cmd/autoq.$name 里面是写了些什么，然后编写一个机器人利用这个结果。
+里面有些 alias 待定，例如 Cancel0, ...

@@ -1,0 +1,33 @@
+这一课举个具体的例子，就讲东方神话的做 task 吧
+这里已经假设大家有了 tintinrc.txt, ansi.sc, esc.sc,
+hp.sc, que.sc 也是比不可少的。
+
+如果需要自动调满内力，还要 tune.sc, 这里我没有提供，
+准备在下一课讲，如果有个 alias att 和 Finisht 找
+不到，自己先想办法写一个就可以了。 *snicker
+
+另外大家要同时有 alias.sc, act.sc, 这是一般用途的。
+然后还要 task1.sc, task2.sc, tscan.pl, task.map.
+task1.sc 和 task2.sc 是一些 trigger,
+tscan.pl 是处理 task.map 并且写成文件的 perl script,
+(所以 perl 也要装好噢！没有试好对诗机器人前不要试自动
+找妖怪的功能。)
+task.map 大家可以编辑改动路径。
+
+这个例子分两部分：
+1) 找妖怪的。基本上就是看 ctask 抓取妖怪名字和地点，
+然后用 tscan.pl 找到路径。调试时将 autotask 设为 1,
+这样找到妖怪就停下了。
+2) 打妖怪的，有时候还是要手动找妖怪的 :D
+这时候应该把 autotask 设为 0. (/var autotask 0)
+找到后，要把两个自作的 tick 打开：
+tick+ F2 0.5 (0.5秒，假设是五级的妖怪，否则不用这么勤快 :)
+tick+ tickft 4 (四秒？)
+这样基本就可以了，如果看到有些 warning, 有未设的变量，那就
+
+如果都觉得满意了，设 autotask 6 就大概可以一起用了，不过
+有很多作业要自己完成 :D 
+自己把这些变量设好就行了，这只是一个例子，要自己仔细调。
+
+(待续。。。)
+
