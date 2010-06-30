@@ -1,0 +1,7 @@
+#NOP 这是一个空文件，编码为 GBK，为方便设立其他 GBK 编码的 tin 文件而设立。
+#NOP 因为 mud 多是 GBK 编码，所以 tin 文件也必须是 GBK 编码。
+
+#nop Anti-idle
+#action {^【天气】} {say 给我钱，给我吃的，给我水喝，谢谢大家。}
+#ticker {idle} {look} {600}
+

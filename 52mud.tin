@@ -1,3 +1,6 @@
+#NOP 这是一个空文件，编码为 GBK，为方便设立其他 GBK 编码的 tin 文件而设立。
+#NOP 因为 mud 多是 GBK 编码，所以 tin 文件也必须是 GBK 编码。
+
 #CONFIG           {AUTO TAB}  {5000}
 #CONFIG           {BUFFER SIZE}  {20000}
 #CONFIG           {COMMAND COLOR}  {<078>}
@@ -27,10 +30,7 @@
 #PATHDIR          {w}  {e}  {8}
 
 #session MudWorld.52mud mud.52mud.com 8888
+#var {tindir} {52mud/}
 
-#split
-
-# Anti-idle
-#action {【天气】} {say 给我钱，给我吃的，给我水喝，谢谢大家。}
-#ticker {idle} {look} {600}
-
+#read {inc/common.tin}
+#read {${tindir}fun.tin}
