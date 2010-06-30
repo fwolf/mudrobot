@@ -1,86 +1,0 @@
-<!DOCTYPE html
-	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-	 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
-<head>
-<title>yTin help</title>
-<meta name="charset" content="GB2312" />
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-</head>
-<body bgcolor="#EBE7D6">
-<h1><table><tr><td><font face="arial" size="1"><a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?e">English</a> <br /> <a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c">Chinese</a></font></td> <td> &nbsp <font face="Comic Sans MS" size="5"><a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin">yTin Online Help</a></font> &nbsp </td> <td><!-- BEGIN FASTCOUNTER CODE -->
-<a target="_top" href="http://member.bcentral.com/cgi-bin/fc/fastcounter-login?1917314"><img height="16" border="0" src="http://fastcounter.bcentral.com/fastcounter?1917314+3834635" width="90" /></a><!-- END FASTCOUNTER CODE --></td></tr></table></h1><SPAN>
-<TABLE WIDTH="100%" CELLPADDING="0" CELLSPACING="0" BORDER="0" BGCOLOR="#0099FF">
-
-<TD BGCOLOR="#0099FF" HEIGHT="20" VALIGN="MIDDLE" NOWRAP="" COLSPAN="4">
-<FONT COLOR="#FFFFFF" FACE="Verdana, Arial" SIZE="1"><B>
-
-<FONT COLOR="#FFFFFF">&nbsp</FONT>
-<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/index_c.html" TARGET="_top">
-<FONT COLOR="#FFFFFF">ÖÐÎÄÖ÷Ò³</FONT></A>
-<FONT COLOR="#FFFFFF"> | </FONT>
-
-<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/index_e.html" TARGET="_top">
-<FONT COLOR="#FFFFFF">Home (english)</FONT></A>
-<FONT COLOR="#FFFFFF"> | </FONT>
-
-<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/cgi-bin/dir.pl/ytin?c" TARGET="_top">
-<FONT COLOR="#FFFFFF">¿ì¿ìÏÂÔØ</FONT></A>
-<FONT COLOR="#FFFFFF"> | </FONT>
-
-<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/cgi-bin/dir.pl/help" TARGET="_top">
-<FONT COLOR="#FFFFFF">ÊµÕ½½Ì³Ì</FONT></A>
-<FONT COLOR="#FFFFFF"> | </FONT>
-
-<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/cgi-bin/help.pl/ytin?c" TARGET="_top">
-<FONT COLOR="#FFFFFF">ÃüÁî°ïÖú</FONT></A>
-<FONT COLOR="#FFFFFF"> | </FONT>
-
-<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/util_c.html" TARGET="_top">
-<FONT COLOR="#FFFFFF">ÊµÓÃ¹¤¾ß</FONT></A>
-<FONT COLOR="#FFFFFF"> | </FONT>
-
-<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/faq_c.html" TARGET="_top">
-<FONT COLOR="#FFFFFF">³£ÎÊÎÊÌâ</FONT></A>
-<FONT COLOR="#FFFFFF"> | </FONT>
-
-<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="http://server6.ezboard.com/fytinytin.html" TARGET="_top">
-<FONT COLOR="#FFFFFF">ÌÖÂÛÁôÑÔ</FONT></A>
-<FONT COLOR="#FFFFFF"> | </FONT>
-
-<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/links_c.html" TARGET="_top">
-<FONT COLOR="#FFFFFF">ÓÑºÃÄàÌ¶</FONT></A>
-<FONT COLOR="#FFFFFF"> | </FONT>
-
-<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/myprogs_c.html" TARGET="_top">
-<FONT COLOR="#FFFFFF">ÎÒµÄ³ÌÐò</FONT></A>
-<FONT COLOR="#FFFFFF"> | </FONT>
-
-<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/mirror_c.html" TARGET="_top">
-<FONT COLOR="#FFFFFF">È«Çò¾µÏñ</FONT></A>
-<FONT COLOR="#FFFFFF"> | </FONT>
-
-</B></FONT></TD>
-</TR>
-</TABLE>
-</SPAN>
-
-<font face="Comic Sans MS" size="2">
-<table border="0" cellspacing="10">
-<font size="5">ignore</font><br>
-<br>
-¸ñÊ½£º<a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-ignore">#ignore</a><br>
-&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp ¿É¼òÐ´Îª <a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-ig">#ig</a>¡£<br>
-ºöÂÔ´¥·¢<br>
-ÓÃ´¦£º¹ØÉÏ»ò´ò¿ªËùÓÐÉè¶¨µÄ´¥·¢ (action) ¡£µÚÒ»´Î¹Ø£¬ÔÙ´ÎÎª¿ª£¬ÔÙÒ»´Î<br>
-&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp ÓÖ¹Ø£¬Èç´Ë·´¸´¡£ÀûÓÚÁÙÊ±¹Ø±Õ´¥·¢¡£<br>
-NEW: ÔÚ²»Çå³þµ±Ç°´¥·¢¿ª¹Ø×´Ì¬Ê±£¬¿ÉÒÔÓÃ¾ø¶ÔÖµ£º<br>
-&nbsp&nbsp &nbsp&nbsp  <a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-ignore">#ignore</a> 1&nbsp&nbsp ¹Ø±Õ´¥·¢<br>
-&nbsp&nbsp &nbsp&nbsp  <a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-ignore">#ignore</a> 0&nbsp&nbsp ¿ªÆô´¥·¢<br>
-<br>
-</table>
-</font>
-<hr>
-
-</body>
-</html>

@@ -1,111 +1,0 @@
-<!DOCTYPE html
-	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-	 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
-<head>
-<title>yTin help</title>
-<meta name="charset" content="GB2312" />
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-</head>
-<body bgcolor="#EBE7D6">
-<h1><table><tr><td><font face="arial" size="1"><a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?e">English</a> <br /> <a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c">Chinese</a></font></td> <td> &nbsp <font face="Comic Sans MS" size="5"><a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin">yTin Online Help</a></font> &nbsp </td> <td><!-- BEGIN FASTCOUNTER CODE -->
-<a target="_top" href="http://member.bcentral.com/cgi-bin/fc/fastcounter-login?1917314"><img height="16" border="0" src="http://fastcounter.bcentral.com/fastcounter?1917314+3834635" width="90" /></a><!-- END FASTCOUNTER CODE --></td></tr></table></h1><SPAN>
-<TABLE WIDTH="100%" CELLPADDING="0" CELLSPACING="0" BORDER="0" BGCOLOR="#0099FF">
-
-<TD BGCOLOR="#0099FF" HEIGHT="20" VALIGN="MIDDLE" NOWRAP="" COLSPAN="4">
-<FONT COLOR="#FFFFFF" FACE="Verdana, Arial" SIZE="1"><B>
-
-<FONT COLOR="#FFFFFF">&nbsp</FONT>
-<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/index_c.html" TARGET="_top">
-<FONT COLOR="#FFFFFF">ÖÐÎÄÖ÷Ò³</FONT></A>
-<FONT COLOR="#FFFFFF"> | </FONT>
-
-<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/index_e.html" TARGET="_top">
-<FONT COLOR="#FFFFFF">Home (english)</FONT></A>
-<FONT COLOR="#FFFFFF"> | </FONT>
-
-<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/cgi-bin/dir.pl/ytin?c" TARGET="_top">
-<FONT COLOR="#FFFFFF">¿ì¿ìÏÂÔØ</FONT></A>
-<FONT COLOR="#FFFFFF"> | </FONT>
-
-<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/cgi-bin/dir.pl/help" TARGET="_top">
-<FONT COLOR="#FFFFFF">ÊµÕ½½Ì³Ì</FONT></A>
-<FONT COLOR="#FFFFFF"> | </FONT>
-
-<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/cgi-bin/help.pl/ytin?c" TARGET="_top">
-<FONT COLOR="#FFFFFF">ÃüÁî°ïÖú</FONT></A>
-<FONT COLOR="#FFFFFF"> | </FONT>
-
-<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/util_c.html" TARGET="_top">
-<FONT COLOR="#FFFFFF">ÊµÓÃ¹¤¾ß</FONT></A>
-<FONT COLOR="#FFFFFF"> | </FONT>
-
-<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/faq_c.html" TARGET="_top">
-<FONT COLOR="#FFFFFF">³£ÎÊÎÊÌâ</FONT></A>
-<FONT COLOR="#FFFFFF"> | </FONT>
-
-<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="http://server6.ezboard.com/fytinytin.html" TARGET="_top">
-<FONT COLOR="#FFFFFF">ÌÖÂÛÁôÑÔ</FONT></A>
-<FONT COLOR="#FFFFFF"> | </FONT>
-
-<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/links_c.html" TARGET="_top">
-<FONT COLOR="#FFFFFF">ÓÑºÃÄàÌ¶</FONT></A>
-<FONT COLOR="#FFFFFF"> | </FONT>
-
-<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/myprogs_c.html" TARGET="_top">
-<FONT COLOR="#FFFFFF">ÎÒµÄ³ÌÐò</FONT></A>
-<FONT COLOR="#FFFFFF"> | </FONT>
-
-<A STYLE="color:#FFFFFF;text-decoration:none;" HREF="/mirror_c.html" TARGET="_top">
-<FONT COLOR="#FFFFFF">È«Çò¾µÏñ</FONT></A>
-<FONT COLOR="#FFFFFF"> | </FONT>
-
-</B></FONT></TD>
-</TR>
-</TABLE>
-</SPAN>
-
-<font face="Comic Sans MS" size="2">
-<table border="0" cellspacing="10">
-<font size="5">alias</font><br>
-<br>
-¸ñÊ½£º <a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-alias">#alias</a> {±ð³ÆÃû}&nbsp&nbsp {±ð³ÆËùÈ¡´úµÄÃüÁî}<br>
-ËµÃ÷£º <a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-alias">#alias</a> ¿É¼òÐ´Îª <a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-ali">#ali</a>, <a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-al">#al</a>¡£<br>
-&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp {±ð³ÆÃû}&nbsp&nbsp ÖÐµÄÀ¨ºÅ { } ¿ÉÒÔÊ¡ÂÔ¡£<br>
-&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp {±ð³ÆËùÈ¡´úµÄÃüÁî} ÖÐµÄÀ¨ºÅÔÚÖ»°üº¬Ò»¸öÃüÁîÊ±¿ÉÊ¡ÂÔ£¬·ñÔò²»¿É¡£<br>
-&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp ¸÷ÃüÁîÓÃ·ÖºÅ ; ¸ô¿ª¡£<br>
-&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp ×¢£ºÒÔÏÂËµÃ÷ÖÐÇé¿öÀàËÆ£¬Ã»ÓÐÌØÊâÇé¿ö²»ÔÙ¶Ô{ }×ö½âÊÍ¡£<br>
-ÓÃ´¦£º½«Ò»¸ö»òÊý¸öÃüÁîËõ¶ÌÎªÒ»¸öalias¡£<br>
-&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp ÃüÁîÖÐ¿ÉÒÔÓÐ±äÁ¿£º%0 - %9¡£%0È¡´úµÄÊÇaliasºó¸úËæµÄËùÓÐ²¿·Ö£¬<br>
-&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp %1ÎªµÚÒ»¸ö´Ê£¬ÒÔ´ËÀàÍÆ¡£µ±Ã»ÓÐ±äÁ¿Ê±£¬default±äÁ¿ÉèÎª%0¡£<br>
-¾ÙÀý£º<br>
-&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp <a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-alias">#alias</a> {cc} {chat* %0}&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp ( = <a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-al">#al</a> cc chat*&nbsp&nbsp )<br>
-&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp µ±¼üÈë£ºcc* hi waiter xine&nbsp&nbsp &nbsp&nbsp ( waiter xine ÊÇÒ»¸öÈË)<br>
-&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp ÏÔÊ¾Îª£º<br>
-&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp ¡¾ÏÐÁÄ¡¿ºËÌÒË«ÊÖ±§È­£¬¶ÔÐÓ»°Ã·×÷ÁË¸öÒ¾µÀ£ºÕâÎ»¹ÃÄïÇëÁË£¡<br>
-<br>
-&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp <a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-alias">#alias</a> da1 {cc kiss %1;cc pure %2;cc cat %3}<br>
-&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp µ±¼üÈë£ºda1 xine miaom panj<br>
-&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp ÏÔÊ¾Îª£º<br>
-&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp ¡¾ÏÐÁÄ¡¿ºËÌÒÇáÇáµØÇ×ÁËÐÓ»°Ã·Ò»ÏÂ£¬ºÃÉîÇéßÏ£®£®£®<br>
-&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp ¡¾ÏÐÁÄ¡¿ºËÌÒÓÃ´ó´óµÄÑÛ¾¦£¬ÌìÕæµØÍû×Å»Ûç¿£®£®£®£®(@_@)¡£<br>
-&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp ¡¾ÏÐÁÄ¡¿ºËÌÒÏñÖ»Ð¡Ã¨°ãµØÒÀÙËÔÚÍüÑÔµÄ»³ÀïÈö½¿¡£<br>
-<br>
-&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp <a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-al">#al</a> walk1 {<a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-4">#4</a> south;climb;<a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-6">#6</a> east;<a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-2">#2</a> say Oh, I am so tired}<br>
-&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp ÕâÊÇ¸öÈ¥Ä³¸öÌØ¶¨µØ·½µÄalias£¬×îºóÐªÐª½Å·¢Á½¾äÀÎÉ§£ºOh, I am so&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp  tired¡£<a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-n">#n</a> ±íÊ¾Í¬Ò»¶¯×÷ÖØ¸´ n ´Î£¬n ÎªÕýÕûÊý¡£<br>
-<br>
-ÆäËü£º<br>
- 1. <a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-alias">#alias</a><br>
-&nbsp&nbsp &nbsp&nbsp  ½«ÁÐ³öËù¶¨ÒåµÄËùÓÐaliases¡£<br>
- 2. <a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-alias">#alias</a> *ch*<br>
-&nbsp&nbsp &nbsp&nbsp  ½«ÁÐ³öËùÓÐº¬ÓÐ ch ÎªÃû×ÖµÄaliases¡£<br>
-&nbsp&nbsp &nbsp&nbsp  <a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-alias">#alias</a> b*<br>
-&nbsp&nbsp &nbsp&nbsp  ½«ÁÐ³öËùÓÐÒÔ b ¿ªÍ·µÄaliases¡£<br>
- 3. Ïà¹ØÃüÁî£º<a href="http://ytin.sourceforge.net/cgi-bin/help.pl/ytin?c-unalias">#unalias</a> ( È¡Ïû±ð³Æ )<br>
-<br>
-</table>
-</font>
-<hr>
-
-</body>
-</html>
