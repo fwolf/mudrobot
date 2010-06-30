@@ -3,4 +3,5 @@
 
 #split
 
+#read {inc/alias.tin}
 #read {inc/color.tin}

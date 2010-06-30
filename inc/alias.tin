@@ -1,0 +1,37 @@
+#NOP 这是一个空文件，编码为 GBK，为方便设立其他 GBK 编码的 tin 文件而设立。
+#NOP 因为 mud 多是 GBK 编码，所以 tin 文件也必须是 GBK 编码。
+
+#nop Common Alias
+
+
+#nop Look direction
+#alias {l} {
+	#if {"e" == "%1"} {
+		look east;
+	};
+	#elseif {"w" == "%1"} {
+		look west;
+	};
+	#elseif {"s" == "%1"} {
+		look south;
+	};
+	#elseif {"n" == "%1"} {
+		look north;
+	};
+	#elseif {"ne" == "%1"} {
+		look northeast;
+	};
+	#elseif {"nw" == "%1"} {
+		look northwest;
+	};
+	#elseif {"se" == "%1"} {
+		look southeast;
+	};
+	#elseif {"sw" == "%1"} {
+		look southwest;
+	};
+	#else {
+		look %0;
+	};
+}
+
