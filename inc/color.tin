@@ -1,0 +1,53 @@
+#NOP 这是一个空文件，编码为 GBK，为方便设立其他 GBK 编码的 tin 文件而设立。
+#NOP 因为 mud 多是 GBK 编码，所以 tin 文件也必须是 GBK 编码。
+
+#nop Base http://tintin.sourceforge.net/scripts/colorutils.php
+#nop This script is written for v1.99.7 and higher
+
+/*
+	Some terminals are capable of displaying colors, but have no colors
+	initialized, or	have the colors initialized to rather odd values.
+	The following script will set them to default values. This might
+	not work for every terminal.
+*/
+#alias {colorinit} {
+	#showme \e[P0000000 \<008> <008>black;
+	#showme \e[P1AA0000 \<018> <018>red;
+	#showme \e[P200AA00 \<028> <028>green;
+	#showme \e[P3AAAA00 \<038> <038>yellow;
+	#showme \e[P40000AA \<048> <048>blue;
+	#showme \e[P5AA00AA \<058> <058>magenta;
+	#showme \e[P600AAAA \<068> <068>cyan;
+	#showme \e[P7AAAAAA \<078> <078>white;
+	#showme \e[P8555555 \<108> <108>light black;
+	#showme \e[P9FF5555 \<118> <118>light red;
+	#showme \e[PA55FF5A \<128> <128>light green;
+	#showme \e[PBFFFF55 \<138> <138>light yellow;
+	#showme \e[PC5555FF \<148> <148>light blue;
+	#showme \e[PDFF55FF \<158> <158>light magenta;
+	#showme \e[PE55FFFF \<168> <168>light cyan;
+	#showme \e[PFFFFFFF \<178> <178>light white
+}
+
+
+#alias {colorreset} {
+     #showme \e[R Colors reset to default.
+}
+
+
+/*
+	Terminals capable of xterm 256 colors will display a color pallet
+	from which you can copy the accompanying color codes.
+*/
+#alias {colorpalette} {
+	#foreach {a;b;c;d;e;f} {cnt1} {
+		#foreach {a;b;c;d;e;f} {cnt2} {
+			#var result <000>;
+			#foreach {a;b;c;d;e;f} {cnt3} {
+				#var result $result  <$cnt1$cnt2$cnt3> <<888>$cnt1$cnt2$cnt3><088>
+			};
+			#showme $result
+		}
+	}
+}
+
