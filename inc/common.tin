@@ -1,5 +1,8 @@
-#NOP 这是一个空文件，编码为 GBK，为方便设立其他 GBK 编码的 tin 文件而设立。
-#NOP 因为 mud 多是 GBK 编码，所以 tin 文件也必须是 GBK 编码。
+#nop This file is GBK encoding, because chinese mud is GBK encoding.
+#nop 此文件为 GBK 编码，因为中文 mud 多是 GBK 编码的。
+#nop Below line is for editor to auto detect file encoding.
+/* <meta http-equiv="content-type" content="text/html;charset=gbk" /> */
+
 
 #split
 
