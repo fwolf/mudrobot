@@ -6,9 +6,16 @@
 ##prompt {【 食 物 】%s%d/%s%d%s【} {<078>食%2/%4} {1}
 
 
-#nop Anti-idle
-#ticker {idle} {look} {600}
+#alias {say-tang300-1} {
+	#script {temp} {php inc/tang300-1.php};
+	say $temp[1];
+}
 
-#alias {act-weather} {say 给我钱，给我吃的，给我水喝，谢谢大家。}
-#action {^【天气】} {act-weather}
+
+#nop Anti-idle
+#alias {say-beg} {say 给我钱，给我吃的，给我水喝，谢谢大家。}
+#ticker {idle} {say-beg} {600}
+
+#nop Robot talk
+#ticker {ticker-tang300-1} {say-tang300-1} {110}
 
