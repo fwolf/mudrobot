@@ -4,6 +4,22 @@
 /* <meta http-equiv="content-type" content="text/html;charset=gbk" /> */
 
 #nop Learn from 武伯 in 古村
-#action {^你一觉醒来，只觉精力充沛。该活动一下了。} {do n;xue wu bo juedao 100}
-#action {^你开始向武伯请教} {do s;sleep;}
+#var {wuBoSkills[1]} {literate}
+#var {wuBoSkills[2]} {blade}
+#var {wuBoSkills[3]} {dodge}
+#var {wuBoSkills[4]} {force}
+#var {wuBoSkills[5]} {parry}
+#var {wuBoSkills[6]} {sword}
+#var {wuBoSkills[7]} {unarmed}
+#var {wuBoSkills[8]} {juedao}
+#var {wuBoSkills[9]} {mieshenquan}
+#var {wuBoSkills[10]} {tianjian}
+#var {wuBoSkills[11]} {xiaoyaobu}
+#var {wuBoSkills[12]} {zhanshenjue}
+#action {^你一觉醒来，只觉精力充沛。该活动一下了。} {do n;xue wu bo $wuBoSkills[+1] 100}
+#action {^这项技能你的程度已经不输你师父了。} {
+    #list {wuBoSkills} {delete} {1};
+    xue wu bo $wuBoSkills[+1] 100
+}
+#action {^你开始向武伯请教} {do s;hp;skills;sleep;}
 
