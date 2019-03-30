@@ -38,6 +38,6 @@
 #var {tinDir} {hkmud/}
 
 #read {inc/common.tin}
-#read {${tinDir}eat.tin}
 #read {${tinDir}fun.tin}
+#read {${tinDir}guCun.tin}
 
