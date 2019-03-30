@@ -4,9 +4,9 @@
 /* <meta http-equiv="content-type" content="text/html;charset=gbk" /> */
 
 
-#alias {enableLian} {
-    #class {xiaoYaoLian} {read} {${tinDir}xiaoYaoLian.tin}
+#alias {enableLianXiaoYao} {
+    #class {lianXiaoYao} {read} {${tinDir}xiaoYaoLian.tin}
 }
-#alias {disableLearnWuBo} {
-    #class {xiaoYaoLian} {kill}
+#alias {disableLianXiaoYao} {
+    #class {lianXiaoYao} {kill}
 }
