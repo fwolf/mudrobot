@@ -16,6 +16,6 @@
 
 
 #nop Anti-idle
-#alias {say-beg} {say 给我钱，给我吃的，给我水喝，谢谢大家。}
-#ticker {idle} {say-beg} {600}
+#alias {sayBeg} {say 给我钱，给我吃的，给我水喝，谢谢大家。}
+#ticker {idle} {sayBeg} {600}
 
