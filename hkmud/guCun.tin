@@ -15,3 +15,6 @@
 #alias {disableLearnWuBo} {
     #class {guCunLearnWuBo} {kill}
 }
+
+#action {^只听野兔嚎了几声，倒在地上扑腾了几下，死了。} {touxi ye tu}
+
