@@ -1,0 +1,14 @@
+#nop This file is GBK encoding, because chinese mud is GBK encoding.
+#nop 此文件为 GBK 编码，因为中文 mud 多是 GBK 编码的。
+#nop Below line is for editor to auto detect file encoding.
+/* <meta http-equiv="content-type" content="text/html;charset=gbk" /> */
+
+
+#alias {yq} {yun regenerate}    #nop 恢复精气
+#alias {yx} {yun recover}       #nop 恢复气血
+#alias {yj} {yun refresh}       #nop 恢复精力
+#alias {yh} {yun heal}          #nop 用内力替自己疗伤
+#alias {ylh} {yun lifeheal}     #nop 用内力替他人疗伤
+
+#alias {yp} {yun powerup}       #nop 用内力短时间内将自己的战斗力提高一倍
+#alias {ys} {yun shield}        #nop 护体真气
