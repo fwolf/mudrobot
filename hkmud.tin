@@ -41,4 +41,5 @@
 #read {${tinDir}alias.tin}
 #read {${tinDir}fun.tin}
 #read {${tinDir}guCun.tin}
+#read {${tinDir}xiaoYao.tin}
 

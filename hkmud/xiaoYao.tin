@@ -1,0 +1,12 @@
+#nop This file is GBK encoding, because chinese mud is GBK encoding.
+#nop 此文件为 GBK 编码，因为中文 mud 多是 GBK 编码的。
+#nop Below line is for editor to auto detect file encoding.
+/* <meta http-equiv="content-type" content="text/html;charset=gbk" /> */
+
+
+#alias {enableLian} {
+    #class {xiaoYaoLian} {read} {${tinDir}xiaoYaoLian.tin}
+}
+#alias {disableLearnWuBo} {
+    #class {xiaoYaoLian} {kill}
+}
