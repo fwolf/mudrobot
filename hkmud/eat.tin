@@ -1,0 +1,12 @@
+#nop This file is GBK encoding, because chinese mud is GBK encoding.
+#nop 此文件为 GBK 编码，因为中文 mud 多是 GBK 编码的。
+#nop Below line is for editor to auto detect file encoding.
+/* <meta http-equiv="content-type" content="text/html;charset=gbk" /> */
+
+##prompt {【 食 物 】%s%d/%s%d%s【} {<078>食%2/%4} {1}
+
+
+#nop Eat in 古村
+#action {^厨房 - (你目前在古村)} {yao}
+#action {^厨师将一个馒头和一碗清水递到你手中，笑道：你慢用。} {eat man tou; e; #5 drink water; drop water}
+
