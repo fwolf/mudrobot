@@ -16,6 +16,7 @@
 #var {wuBoSkills[10]} {tianjian}
 #var {wuBoSkills[11]} {xiaoyaobu}
 #var {wuBoSkills[12]} {zhanshenjue}
+#var {wuBoSkills[13]} {martial-cognize}
 #action {^你一觉醒来，只觉精力充沛。该活动一下了。} {do n;xue wu bo $wuBoSkills[+1] 100}
 #action {^这项技能你的程度已经不输你师父了。} {
     #list {wuBoSkills} {delete} {1};
