@@ -1,0 +1,8 @@
+#nop This file is GBK encoding, because chinese mud is GBK encoding.
+#nop 此文件为 GBK 编码，因为中文 mud 多是 GBK 编码的。
+#nop Below line is for editor to auto detect file encoding.
+/* <meta http-equiv="content-type" content="text/html;charset=gbk" /> */
+
+#action {^你一觉醒来，只觉精力充沛。该活动一下了。} {do e,tuna 800}
+#action {^你吐纳完毕，睁开双眼，站了起来。} {do dazuo 900}
+#action {^你只觉内息运转顺畅，将真气还合丹田，站了起来。} {do w,hp,skills,sleep}

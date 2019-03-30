@@ -21,4 +21,4 @@
     xue kang $lianSkills[+1] 2500
 }
 #action {^你一觉醒来，只觉精力充沛。该活动一下了。} {do e,e,e,s,s,xue kang $lianSkills[+1] 2500}
-#action {^你听了%1的指导，似乎有些心得。} {do n,n,w,w,w,hp,skills,sleep}
+#action {^你听了%1的指导，%*似乎有些心得。} {do n,n,w,w,w,hp,skills,sleep}

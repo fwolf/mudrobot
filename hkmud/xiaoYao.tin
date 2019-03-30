@@ -11,6 +11,12 @@
     #class {xiaoYaoLian} {kill}
 }
 
+#alias {enableXiaoYaoTuna} {
+    #class {xiaoYaoTuna} {read} {${tinDir}xiaoYaoTuna.tin}
+}
+#alias {disableXiaoYaoTuna} {
+    #class {xiaoYaoTuna} {kill}
+}
 #nop Learn from øµπ„¡Í(kang guangling)
 #alias {enableXiaoYaoLearn1} {
     #class {xiaoYaoLearn1} {read} {${tinDir}xiaoYaoLearn1.tin}
@@ -18,3 +24,4 @@
 #alias {disableXiaoYaoLearn1} {
     #class {xiaoYaoLearn1} {kill}
 }
+
