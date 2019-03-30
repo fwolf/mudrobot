@@ -4,6 +4,8 @@
 /* <meta http-equiv="content-type" content="text/html;charset=gbk" /> */
 
 
+#alias {p} {perform}
+
 #alias {yq} {yun regenerate}    #nop 恢复精气
 #alias {yx} {yun recover}       #nop 恢复气血
 #alias {yj} {yun refresh}       #nop 恢复精力
