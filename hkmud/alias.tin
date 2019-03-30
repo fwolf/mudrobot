@@ -5,6 +5,7 @@
 
 
 #alias {p} {perform}
+#nop p lian 天    剑 (tianjian) 连环决
 
 #alias {yq} {yun regenerate}    #nop 恢复精气
 #alias {yx} {yun recover}       #nop 恢复气血
@@ -14,3 +15,5 @@
 
 #alias {yp} {yun powerup}       #nop 用内力短时间内将自己的战斗力提高一倍
 #alias {ys} {yun shield}        #nop 护体真气
+
+#alias {yzqd} {do rideto yangzhou; n; n; w; ask qiandao npc about 签到}
