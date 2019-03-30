@@ -1,0 +1,21 @@
+#nop This file is GBK encoding, because chinese mud is GBK encoding.
+#nop 此文件为 GBK 编码，因为中文 mud 多是 GBK 编码的。
+#nop Below line is for editor to auto detect file encoding.
+/* <meta http-equiv="content-type" content="text/html;charset=gbk" /> */
+
+##prompt {【 食 物 】%s%d/%s%d%s【} {<078>食%2/%4} {1}
+
+
+#alias {sayTang300} {
+	#script {temp} {php inc/tang300-1.php};
+	say $temp[1];
+}
+
+#nop Robot talk
+#ticker {tickerTang300} {sayTang300} {110}
+
+
+#nop Anti-idle
+#alias {say-beg} {say 给我钱，给我吃的，给我水喝，谢谢大家。}
+#ticker {idle} {say-beg} {600}
+

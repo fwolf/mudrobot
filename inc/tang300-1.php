@@ -3,7 +3,7 @@
  * Random select 1 line from tang300 and echo out.
  *
  * @package		mudrobot
- * @copyright   Copyright 2010, Fwolf
+ * @copyright   Copyright 2010-2019, Fwolf
  * @author      Fwolf <fwolf.aide+mudrobot@gmail.com>
  * @since		2010-07-01
  */

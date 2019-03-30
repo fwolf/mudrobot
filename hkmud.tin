@@ -1,0 +1,42 @@
+#nop This file is GBK encoding, because chinese mud is GBK encoding.
+#nop 此文件为 GBK 编码，因为中文 mud 多是 GBK 编码的。
+#nop Below line is for editor to auto detect file encoding.
+/* <meta http-equiv="content-type" content="text/html;charset=gbk" /> */
+
+
+#config           {AUTO TAB}  {5000}
+#config           {BUFFER SIZE}  {20000}
+#config           {CHARSET}  {BIG5}
+#config           {COMMAND COLOR}  {<078>}
+#config           {COMMAND ECHO}  {ON}
+#config           {CONNECT RETRY}  {15}
+#config           {HISTORY SIZE}  {1000}
+#config           {LOG}  {RAW}
+#config           {PACKET PATCH}  {0.01}
+#config           {REPEAT CHAR}  {!}
+#config           {REPEAT ENTER}  {OFF}
+#config           {SCROLL LOCK}  {ON}
+#config           {SPEEDWALK}  {OFF}
+#config           {TINTIN CHAR}  {#}
+#config           {VERBATIM}  {OFF}
+#config           {VERBATIM CHAR}  {\}
+#config           {VERBOSE}  {OFF}
+#config           {WORDWRAP}  {ON}
+#PATHDIR          {d}  {u}  {32}
+#PATHDIR          {e}  {w}  {2}
+#PATHDIR          {n}  {s}  {1}
+#PATHDIR          {ne}  {sw}  {3}
+#PATHDIR          {nw}  {se}  {9}
+#PATHDIR          {s}  {n}  {4}
+#PATHDIR          {se}  {nw}  {6}
+#PATHDIR          {sw}  {ne}  {12}
+#PATHDIR          {u}  {d}  {16}
+#PATHDIR          {w}  {e}  {8}
+
+
+#session hkmud hkmud.com 8888
+#var {tinDir} {hkmud/}
+
+#read {inc/common.tin}
+#read {${tinDir}fun.tin}
+

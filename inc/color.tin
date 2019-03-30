@@ -14,7 +14,7 @@
 	The following script will set them to default values. This might
 	not work for every terminal.
 */
-#alias {colorinit} {
+#alias {colorInit} {
 	#showme \e[P0000000 \<008> <008>black;
 	#showme \e[P1AA0000 \<018> <018>red;
 	#showme \e[P200AA00 \<028> <028>green;
@@ -34,7 +34,7 @@
 }
 
 
-#alias {colorreset} {
+#alias {colorReset} {
      #showme \e[R Colors reset to default.
 }
 
@@ -43,7 +43,7 @@
 	Terminals capable of xterm 256 colors will display a color pallet
 	from which you can copy the accompanying color codes.
 */
-#alias {colorpalette} {
+#alias {colorPalette} {
 	#foreach {a;b;c;d;e;f} {cnt1} {
 		#foreach {a;b;c;d;e;f} {cnt2} {
 			#var result <000>;
