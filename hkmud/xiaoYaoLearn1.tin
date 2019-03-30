@@ -1,0 +1,24 @@
+#nop This file is GBK encoding, because chinese mud is GBK encoding.
+#nop 此文件为 GBK 编码，因为中文 mud 多是 GBK 编码的。
+#nop Below line is for editor to auto detect file encoding.
+/* <meta http-equiv="content-type" content="text/html;charset=gbk" /> */
+
+#nop From 康广陵(kang guangling)
+#var {lianSkills[1]} {xiaowuxiang}
+#var {lianSkills[2]} {hand}
+#var {lianSkills[3]} {strike}
+#var {lianSkills[4]} {qingyun-shou}
+#action {^你的%1火候不够，难以继续提升你%2的水平。} {
+    #list {lianSkills} {delete} {1};
+    lian $lianSkills[+1] 2500
+}
+#action {^这项技能你的程度已经不输你师父了。} {
+    #list {lianSkills} {delete} {1};
+    lian $lianSkills[+1] 2500
+}
+#action {^也许是缺乏实战经验，你对%1的回答总是无法领会。} {
+    #list {lianSkills} {delete} {1};
+    lian $lianSkills[+1] 2500
+}
+#action {^你一觉醒来，只觉精力充沛。该活动一下了。} {do e,e,e,s,s,xue kang $lianSkills[+1] 2500}
+#action {^你听了%1的指导，似乎有些心得。} {do n,n,w,w,w,hp,skills,sleep}

@@ -6,9 +6,13 @@
 #var {lianSkills[1]} {dodge}
 #var {lianSkills[2]} {unarmed}
 #action {^你一觉醒来，只觉精力充沛。该活动一下了。} {do e,lian $lianSkills[+1] 2000}
-#action {^这项技能你的程度已经不输你师父了。} {
+#action {^你的%1火候不够，难以继续提升你%2的水平。} {
     #list {lianSkills} {delete} {1};
-    lian $wuBoSkills[+1] 2000
+    lian $lianSkills[+1] 2000
+}
+#action {^也许是缺乏实战经验，你的练习总没法进步。} {
+    #list {lianSkills} {delete} {1};
+    lian $lianSkills[+1] 2000
 }
 #action {^你试着把%1练了%2趟。} {do w,hp,skills,sleep}
 

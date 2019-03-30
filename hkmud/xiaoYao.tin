@@ -4,9 +4,17 @@
 /* <meta http-equiv="content-type" content="text/html;charset=gbk" /> */
 
 
-#alias {enableLianXiaoYao} {
-    #class {lianXiaoYao} {read} {${tinDir}xiaoYaoLian.tin}
+#alias {enableXiaoYaoLian} {
+    #class {xiaoYaoLian} {read} {${tinDir}xiaoYaoLian.tin}
 }
-#alias {disableLianXiaoYao} {
-    #class {lianXiaoYao} {kill}
+#alias {disableXiaoYaoLian} {
+    #class {xiaoYaoLian} {kill}
+}
+
+#nop Learn from 康广陵(kang guangling)
+#alias {enableXiaoYaoLearn1} {
+    #class {xiaoYaoLearn1} {read} {${tinDir}xiaoYaoLearn1.tin}
+}
+#alias {disableXiaoYaoLearn1} {
+    #class {xiaoYaoLearn1} {kill}
 }
