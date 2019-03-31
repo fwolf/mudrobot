@@ -8,6 +8,7 @@
 #var {lianSkills[2]} {hand}
 #var {lianSkills[3]} {strike}
 #var {lianSkills[4]} {qingyun-shou}
+#var {lianSkills[5]} {liuyang-zhang}
 #action {^你的%1火候不够，难以继续提升你%2的水平。} {
     #list {lianSkills} {delete} {1};
     xue kang $lianSkills[+1] 2500
